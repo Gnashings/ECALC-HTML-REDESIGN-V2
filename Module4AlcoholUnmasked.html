@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="podium.css">
+<script src="podium.js"></script>
+</head>
+<body>
+
+  <div id="mySidenav" class="sidenav">
+    <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+    <div w3-include-html="content.html"></div>
+  </div>
+
+<div class="grid-container">
+    <div class="indexnav">
+        <span style="font-size:30px;cursor:pointer" onclick="openNav()">&#9776; Index</span>
+    </div>
+    <div class="whiteboard">
+        <div class = "orangeBackground">
+            <div id = 'AUInteractive'>
+                <div id= 'AUQuestion'>
+                    <h2 id = 'AUQuestText'>
+                        "Drinking alcohol makes a person..."
+                    </h2>
+                </div>
+                <div id = 'AUVideo'></div>
+                <button id = 'Sick' class = 'AUButton' onClick = 'convertButton(this.id)'>???</button>
+                <button id = 'Happy' class = 'AUButton' onClick = 'convertButton(this.id)'>???</button> <br> 
+            
+                <button id = 'Sleepy' class = 'AUButton' onClick = 'convertButton(this.id)'>???</button>
+                <button id = 'Outgoing' class = 'AUButton' onClick = 'convertButton(this.id)'>???</button> <br>
+                
+                <button id = 'Dizzy' class = 'AUButton' onClick = 'convertButton(this.id)'>???</button>
+                <button id = 'Relaxed' class = 'AUButton' onClick = 'convertButton(this.id)'>???</button> <br>
+            
+                <button id = 'Sloppy' class = 'AUButton' onClick = 'convertButton(this.id)'>???</button>
+                <button id = 'Attractive' class = 'AUButton' onClick = 'convertButton(this.id)'>???</button> <br>
+                
+                <button id = 'Nauseous' class = 'AUButton' class = 'AUButton' onClick = 'convertButton(this.id)'>???</button>
+                <button id = 'Social' class = 'AUButton' onClick = 'convertButton(this.id)'>???</button> <br>
+            
+                <button id = 'Slur' class = 'AUButton' onClick = 'convertButton(this.id)'>???</button>
+                <button id = 'Talkative' class = 'AUButton' onClick = 'convertButton(this.id)'>???</button> <br>
+            
+                <button id = 'Clumsy' class = 'AUButton' onClick = 'convertButton(this.id)'>???</button>
+                <button id = 'Loud' class = 'AUButton' onClick = 'convertButton(this.id)'>???</button> <br>
+                <br>
+                <div id ='AUControls'>
+                    <button id='back' class = 'quizbutton' onClick = 'Prev()'> ◄ </button>
+                    <button id='next' class = 'quizbutton' onClick = 'Next()'> ► </button>
+                </div>
+            
+            </div>
+        </div>
+    </div>
+      <div class="backfwd">
+        <form action="Module4WorkbookExerciseActivitySheet1.html">
+            <input type="submit" value="" class="backbtn" />
+            <br>
+            Back
+        </form>
+        <form action="Module5.html">
+            <input type="submit" value="" class="fwdbtn" />
+            <br>
+            Next
+        </form>
+      </div>
+      <div class="fullscreen">
+        <button class="fullscreenBtn" onclick="openFullscreen();"</button>
+      </div>
+</div>
+<script>
+  includeHTML();
+</script>
+<script src="alcoholUnmasked.js"></script>
+</body>
+</html> 

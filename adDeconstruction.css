@@ -1,0 +1,110 @@
+#ADQuestion{
+    background-color:#3e353e99;
+    margin-top: 5px;
+    margin-bottom: 5px; 
+}
+
+#ADInteractive{
+    min-width: 80%;
+}
+
+#ADQuestText{
+    font-weight: bold;
+    color: white;
+    text-align: center;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    text-shadow: 3px 3px 3px #000000;
+}
+
+#ADControls{
+    text-align: center;
+}
+
+#ADmain {
+    text-align: center;
+    padding: 5px;
+    margin-bottom: 5%;
+    margin-top: 5%;
+
+}
+
+#ADverlay {
+    position: fixed;
+    display: none;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0,0,0,0.5);
+    z-index: 2;
+    cursor: pointer;
+  }
+
+#expectanciesBtn{
+    background: linear-gradient(to bottom, #fc1c03 5%, #e4685d 100%);
+}
+
+.ADButton{
+    width: 250px;
+    padding: 10px;
+    margin: 3px;
+    border-radius:6px;
+	border:1px;
+    color:#333333;
+	font-family:Arial;
+	font-size:1em;
+	font-weight:bold;
+    background:linear-gradient(to bottom, #ffec64 5%, #ffab23 100%);
+}
+
+body {font-family: Arial, Helvetica, sans-serif;}
+
+/* The Modal (background) */
+.ADmodal {
+  display: none; /* Hidden by default */
+  position: fixed; /* Stay in place */
+  z-index: 1; /* Sit on top */
+  padding-top: 100px; /* Location of the box */
+  left: 0;
+  top: 0;
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+  overflow: auto; /* Enable scroll if needed */
+  background-color: rgb(0,0,0); /* Fallback color */
+  background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+}
+
+/* Modal Content */
+.ADmodal-content {
+  background-color: #d8d8d8;
+  margin: auto;
+  padding: 20px;
+  border: 1px solid #888;
+  border-radius: 15px;
+  width: 30%;
+}
+
+.ADmodalImg {
+    max-width: 100%;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* The Close Button */
+.ADclose {
+  color: #aaaaaa;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+}
+
+.ADclose:hover,
+.ADclose:focus {
+  color: #000;
+  text-decoration: none;
+  cursor: pointer;
+}

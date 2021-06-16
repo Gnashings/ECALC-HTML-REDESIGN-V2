@@ -1,0 +1,151 @@
+.brain-grid {
+    /*display: grid;
+    position: relative;
+    grid-template-columns: 2fr 0.5fr 0.5fr 2fr;
+    grid-template-rows: 1.25fr 1fr 1fr 1fr 1fr 1fr 1fr 0.25fr;
+    gap: 0px 0px;
+    grid-template-areas:
+      "brain-header brain-header brain-header brain-header"
+      "brain-image-1 . . brain-image-2"
+      "brain-image-1 . . brain-image-2"
+      "brain-image-1 . . brain-image-2"
+      "brain-alcohol-count-1 brain-btn-down brain-btn-up brain-alcohol-count-2"
+      "brain-gauge-1 . . brain-gauge-2"
+      "brain-moodtext-1 brain-countdown brain-countdown brain-moodtext-2"
+      "brain-moodtext-1 brain-countdown brain-countdown brain-moodtext-2";*/
+      display: grid;
+      position: relative;
+      grid-template-columns: 2fr 0.5fr 0.5fr 2fr;
+      grid-template-rows: 1fr 1fr 1fr 0.25fr 0.25fr 1fr;
+      gap: 0px 0px;
+      grid-template-areas: "brain-header brain-header brain-header brain-header"
+        "brain-image-1 . . brain-image-2"
+        "brain-image-1 . . brain-image-2"
+        "brain-alcohol-count-1 brain-btn-down brain-btn-up brain-alcohol-count-2"
+        "brain-gauge-1 . . brain-gauge-2"
+        "brain-moodtext-1 brain-countdown brain-countdown brain-moodtext-2";
+  }
+  
+  /*Grids*/
+  .brain-header { grid-area: brain-header; }
+  
+  .brain-image-1 { grid-area: brain-image-1; }
+  
+  .brain-alcohol-count-1 { grid-area: brain-alcohol-count-1; }
+  
+  .brain-image-2 { grid-area: brain-image-2; }
+  
+  .brain-btn-down {
+    grid-area: brain-btn-down;
+    border: none;
+    background: transparent;
+    background-image: url(images/ArrowDown.svg), url(images/GreenCircleButton.svg);
+    background-position: 50% 50%, center;
+    background-repeat: no-repeat, no-repeat;
+    background-size: 55%, contain;
+    height: 50%;
+    width: 50%;
+    margin-right: auto;
+    margin-left: auto;
+    margin: auto;
+  }
+  
+  .brain-btn-up {
+    grid-area: brain-btn-up;
+    border: none;
+    background: transparent;
+    background-image: url(images/ArrowUp.svg), url(images/GreenCircleButton.svg);
+    background-position: 50% 50%, center;
+    background-repeat: no-repeat, no-repeat;
+    background-size: 55%, contain;
+    height: 50%;
+    width: 50%;
+    margin-right: auto;
+    margin-left: auto;
+    margin: auto;
+  }
+  
+  .brain-alcohol-count-2 { grid-area: brain-alcohol-count-2; }
+  
+  .brain-gauge-1 {
+    grid-area: brain-gauge-1;
+    position: relative;
+    z-index: 0;
+    width: 100%;
+    height: 100%;
+  }
+  
+  .brain-gauge-2 {
+    grid-area: brain-gauge-2;
+    position: relative;
+    z-index: 0;
+    width: 100%;
+    height: 100%;
+  }
+  
+  .brain-moodtext-1 { grid-area: brain-moodtext-1; margin-bottom: 5%;}
+  
+  .brain-moodtext-2 { grid-area: brain-moodtext-2; margin-bottom: 5%;}
+  
+  .brain-countdown { grid-area: brain-countdown; }
+  /*Grids*/
+
+  /*image styling*/
+
+  .brain-img {
+    width: 90%;
+    display: block;
+    margin-right: auto;
+    margin-left: auto;
+  }
+  .center-img {
+    display: block;
+    margin-right: auto;
+    margin-left: auto;
+  }
+
+  .droplet {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 84px;
+    width: 100%;
+    z-index: 1;
+  }
+
+  .gaugedial {
+    position: absolute;
+    bottom: 0;
+    left: 79px;
+    width: 128px;
+    transition: all 1s;
+    z-index: 2;
+  }
+
+  /*Text*/
+  .brain-countdown div{
+    margin-block-start: 0px;
+    margin-block-end: 0px;
+    padding-left: 5px;
+    padding-right: 5px;
+    font-size: 0.8em;
+  }
+
+  .alcohol-count {
+    text-align: center;
+  }
+
+  .moodtext {
+    height: 100%;
+    border-style: solid;
+    border-width: 5px;
+    display: grid;
+    border-color: green;
+    background-color: #15d515;
+    grid-template-columns: 1fr 1fr;
+    color: white;
+  }
+
+  .mood-child {
+    padding: 5px;
+  }  

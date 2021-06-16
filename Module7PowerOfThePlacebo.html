@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="podium.css">
+<link rel="stylesheet" href="videoAds.css">
+<script src="podium.js"></script>
+</head>
+<body>
+
+  <div id="mySidenav" class="sidenav">
+    <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+    <div w3-include-html="content.html"></div>
+  </div>
+
+<div class="grid-container">
+    <div class="indexnav">
+        <span style="font-size:30px;cursor:pointer" onclick="openNav()">&#9776; Index</span>
+    </div>
+    <div class="whiteboard">
+        <div class = "orangeBackground">
+            <div id = 'ADInteractive'>
+                <h2 style="color: darkblue;">The Power of the Placebo</h2>
+                <div id= 'ADVideo'>
+                    <video width="640" height="480" controls>
+                      <source src="Videos/ad_3.mp4" type="video/mp4">
+                    </video>
+                </div>
+            </div>
+        </div>
+    </div>
+      <div class="backfwd">
+        <form action="Module7BarLabResearch.html">
+            <input type="submit" value="" class="backbtn" />
+            <br>
+            Back
+        </form>
+        <form action="Module8.html">
+            <input type="submit" value="" class="fwdbtn" />
+            <br>
+            Next
+        </form>
+      </div>
+      <div class="fullscreen">
+        <button class="fullscreenBtn" onclick="openFullscreen();"</button>
+      </div>
+</div>
+<script>
+  includeHTML();
+</script>
+<script src="becauseWeCan.js"></script>
+</body>
+</html> 

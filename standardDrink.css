@@ -1,0 +1,71 @@
+#standardDrink{
+    min-width: 50%;
+    max-width: 80%;
+    font-family: DKBabySitter;
+    font-weight: bold;
+}
+.optionbtn{
+    font-family: DKBabySitter;
+    font-weight: bold;
+    border:none;
+    height: 140px;
+    width: 80px;
+    margin: 10px;
+}
+.options{
+    display: inline-block;
+
+    text-align: center;
+    background-color:rgba(62, 53, 62, 0.6);
+    width: 100%;
+}
+
+#SDQuestion{
+    padding: 5%;
+    margin-top: 0%;
+    background-color:rgba(62, 53, 62, 0);
+}
+
+#SDQuestText{
+    font-size: 1.5em;
+    text-align: center;
+    color: black;
+}
+
+
+#SDexpText{
+    padding-top: 60px ;
+}
+
+
+
+#optionA {
+    background: transparent;
+    background: url("images/OptionA.png") center no-repeat;
+    background-size: 100%;
+}
+#optionB {
+    background: transparent;
+    background: url("images/OptionB.png") center no-repeat;
+    background-size: 100%;
+}
+#optionC {
+    background: transparent;
+    background: url("images/OptionC.png") center no-repeat;
+    background-size: 100%;
+}
+#optionD {
+    background: transparent;
+    background: url("images/OptionD.png") center no-repeat;
+    background-size: 100%;
+}
+#optionE {
+    background: transparent;
+    background: url("images/OptionE.png") center no-repeat;
+    background-size: 100%;
+}
+#optionF {
+    background: transparent;
+    background: url("images/OptionF.png") center no-repeat;
+    background-size: 100%;
+}

@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="podium.css">
+<script src="podium.js"></script>
+
+</head>
+<body>
+
+  <div id="mySidenav" class="sidenav">
+    <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+    <div w3-include-html="content.html"></div>
+  </div>
+
+<div class="grid-container">
+    <div class="indexnav">
+        <span style="font-size:30px;cursor:pointer" onclick="openNav()">&#9776; Index</span>
+    </div>
+    <div class="whiteboard">
+      <div class="emptybackground">
+        <div class = "content">
+          <h1>Module 2: The Standard Drink</h1>
+          <li>THE STANDARD DRINK.</li>
+          <li>FREE POUR!</li>
+          <li>THE STANDARD DRINK IN A SOLO CUP</li>
+          <li>NON-STANDARD CONTAINERS</li>
+        </div>
+      </div>
+    </div>
+      <div class="backfwd">
+        <form action="Module1FactOrMyth.html">
+            <input type="submit" value="" class="backbtn" />
+            <br>
+            Back
+        </form>
+        <form action="Module2TheStandardDrinkGame.html">
+            <input type="submit" value="" class="fwdbtn" />
+            <br>
+            Next
+        </form>
+      </div>
+      <div class="fullscreen">
+        <button class="fullscreenBtn" onclick="openFullscreen();"</button>
+      </div>
+</div>
+<script>
+  includeHTML();
+</script>
+
+</body>
+</html> 

@@ -1,0 +1,308 @@
+@import url("quiz.css");
+@import url("standardDrink.css");
+@import url("alcoholUnmasked.css");
+@import url("adDeconstruction.css");
+@import url("backgrounds.css");
+
+html{
+  /*background: linear-gradient(0deg, white, rgb(241, 241, 241) 100%) no-repeat;*/
+  background-color: #222222;
+  min-height: 685px;
+}
+
+@font-face {
+  font-family: 'DKBabySitter';
+  src: url('DKBabySitter.ttf');
+}
+
+#noborder{
+  border: none;
+  background: linear-gradient(0deg, grey, white 100%) no-repeat;
+}
+
+body {
+  font-family: "Lato", sans-serif;
+  box-sizing: border-box;
+  border: 16px solid transparent;
+  border-image: url(images/border.png) 16 round;
+  margin: 0;
+  min-width: 965px;
+  min-height: 685px;
+}
+
+.sidenav {
+  height: 90%;
+  width: 0;
+  position: fixed;
+  z-index: 10;
+  top: 0;
+  left: 0;
+  background: linear-gradient(0deg, white, rgb(202, 202, 202) 100%) no-repeat;
+  background-image: url("images/nav.png");
+  background-size: cover;
+  overflow-x: hidden;
+  transition: 0.5s;
+  padding-top: 60px;
+}
+
+.sidenav a { 
+  padding: 3px 2px 2px 10px;
+  text-decoration: none;
+  font-size: .8em;
+  color: #000000;
+  display: block;
+  transition: 0.3s;
+}
+
+.sidenav a:hover {
+  color: #000000;
+  background-color: #ffec64;
+}
+
+.sidenav .closebtn {
+  position: absolute;
+  top: 0;
+  right: 25px;
+  font-size: 36px;
+  margin-left: 50px;
+}
+
+.fullscreenBtn{
+  background:url("images/fullscreen.png") center no-repeat;
+  background-size: 100%;
+  width:40px; 
+  height:40px; 
+  border: 0;
+  max-width:100%;
+  max-height:100%;
+}
+.fullscreenBtn:hover {
+		background-color:#ffffff;
+}
+
+.logo{
+  position: relative;
+  text-align: center;
+  color: white;
+}
+
+.logoIMG{
+  -webkit-filter: drop-shadow(15px 15px #222222);
+  filter: drop-shadow(15px 15px #222222);
+}
+
+.logoText{
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+  font-size: 8em;
+  text-shadow: 4px 4px black;
+}
+
+.buttonIMG{
+  -webkit-filter: drop-shadow(15px 15px #222222);
+  filter: drop-shadow(5px 5px #222222);
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 50%;
+}
+
+.simpleImg{
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 50%;
+}
+
+
+.soloCup{
+  display: block;
+  margin: 0 auto;
+  max-width: 400px;
+}
+
+.introText{
+  color: white;
+  font-size: 1.7em;
+  text-shadow: 1px 1px black;
+  padding-top: 50px;
+}
+
+.beginbtn{
+  box-shadow: 0px 1px 0px 0px #fff6af;
+	background:linear-gradient(to bottom, #ffec64 5%, #ffab23 100%);
+	background-color:#ffec64;
+	border-radius:6px;
+	border:1px solid #ffaa22;
+	display:inline-block;
+	cursor:pointer;
+	color:#333333;
+	font-family:Arial;
+	font-size:1em;
+	font-weight:bold;
+  width: 200px;
+	padding:6px 24px;
+	text-decoration:none;
+	text-shadow:0px 1px 0px #ffee66;
+}
+.beginbtn:hover {
+	background:linear-gradient(to bottom, #ffab23 5%, #ffec64 100%);
+	background-color:#ffab23;
+}
+.beginbtn:active {
+	position:relative;
+	top:1px;
+}
+
+#main {
+  transition: margin-left .5s;
+  padding: 16px;
+  text-align: center;
+}
+
+#align-left {
+  text-align: left;
+}
+
+#align-center {
+  text-align: center;
+}
+
+#whiteboard-border { 
+  border: 16px solid transparent;
+  
+  border-image: url(images/border.png) 16 round;
+}
+
+.backbtn {
+  border: none;
+  background: transparent;
+  background-image: url(images/back.png);
+  height: 48px;
+  width: 38px;
+}
+
+.fwdbtn {
+  border: none;
+  background: transparent;
+  background-image: url(images/fwd.png);
+  height: 48px;
+  width: 38px;
+}
+.grid-container {
+  display: grid;
+  grid-template-columns: 0.5fr repeat(3, 2fr) 0.5fr;
+  grid-template-rows: 0.5fr repeat(3, 4fr) 0.5fr;
+  min-height: 100%;
+  gap: 0px 0px;
+  background: linear-gradient(0deg, white, rgb(241, 241, 241) 100%) no-repeat;
+  grid-template-areas:
+  "indexnav indexnav . . fullscreen"
+  ". whiteboard whiteboard whiteboard ."
+  ". whiteboard whiteboard whiteboard ."
+  ". whiteboard whiteboard whiteboard backfwd"
+  ". . . . .";
+}
+
+.backfwd {
+  grid-area: backfwd;
+  font-family: DKBabySitter;
+  font-weight: bold;
+  margin: auto;
+}
+
+.indexnav {
+  grid-area: indexnav;
+  transition: margin-left .5s;
+  font-family: DKBabySitter;
+  font-weight: bold;
+  text-align: left;
+}
+
+.fullscreen {
+  grid-area: fullscreen;
+  margin: auto;
+}  
+
+.whiteboard {
+  grid-area: whiteboard;
+}
+
+h1{
+  color: rgb(180, 16, 16);
+  font-size: 2em;
+}
+
+#SDexpText {
+  text-align: center;
+}
+.content{
+  padding-top: 0%;
+  font-family: DKBabySitter;
+  font-weight: bold;
+}
+
+.threeRowFlex{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.threeRowFlexChild{
+  width: 28%;
+  text-align: center;
+}
+
+p.orangeText{
+  color: #ffaa22;
+  margin-block-start: 0%;
+  margin-block-end: 0%;
+}
+
+p.removeBlockMargin{
+  margin-block-start: 0%;
+  margin-block-end: 0%;
+}
+
+.bottomContainer{
+  position:relative;
+}
+
+.moveBottom{
+  position: absolute;
+  bottom:0;
+  left:0;          
+}
+
+.wb-table{
+  border-style: solid;
+  border-width: 5px;
+  border-color: black;
+  margin-left: auto;
+  margin-right: auto;
+  width: 80%;
+}
+
+.workbook{
+  max-width: 75%;
+  margin-left: auto;
+  margin-right:auto;
+  text-align: center;
+  font-family: "Century Gothic", sans-serif;
+  font-weight: 500;
+}
+
+.workbook p {
+  padding-left: 10px;
+  padding-right: 10px;
+}
+
+@media screen and (max-width: 450px) {
+  .sidenav {padding-top: 15px;}
+  .sidenav a {font-size: 18px;}
+  .indexnav span {font-size: 24px;}
+  .fullscreenBtn{ background:url("images/fullscreen.png") center no-repeat; background-size: 50% 50%;}
+
+}

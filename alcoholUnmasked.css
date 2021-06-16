@@ -1,0 +1,31 @@
+
+
+#AUQuestion{
+    background-color:#3e353e99;
+    margin-top: 5px;
+    margin-bottom: 5px; 
+}
+
+#AUQuestText{
+    font-weight: bold;
+    color: white;
+    text-align: center;
+}
+
+.AUButton{
+    width: 250px;
+    padding: 5px;
+    margin: 1px;
+    border-radius:6px;
+	border:1px;
+    color:#333333;
+	font-family:Arial;
+	font-size:1em;
+	font-weight:bold;
+    background:linear-gradient(to bottom, #ffec64 5%, #ffab23 100%);
+}
+
+.AUVideo{
+    text-align: center;
+    color: #02ab0d;
+}

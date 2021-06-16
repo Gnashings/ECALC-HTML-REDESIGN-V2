@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<svg version="1.1" id="Layer_1"
+xmlns="http://www.w3.org/2000/svg"
+xmlns:xlink="http://www.w3.org/1999/xlink"
+xmlns:author="http://www.sothink.com"
+width="36px" height="51px"
+xml:space="preserve">
+<g id="745" transform="matrix(1, 0, 0, 1, -310.7, -210.1)">
+<linearGradient
+id="LinearGradID_346" gradientUnits="userSpaceOnUse" gradientTransform="matrix(0.0213928, 0, 0, -0.0213928, 328.45, 228.3)" spreadMethod ="pad" x1="-819.2" y1="0" x2="819.2" y2="0" >
+<stop  offset="0" style="stop-color:#706F71;stop-opacity:1" />
+<stop  offset="1" style="stop-color:#050607;stop-opacity:1" />
+</linearGradient>
+<path style="fill:url(#LinearGradID_346) " d="M339.55,233.15L329.05 238.8Q329.25 242.25 327.9 244.3Q326.7 246.15 324.85 246.25Q323 246.35 321.8 244.8Q320.45 243.05 320.75 240.15Q325.1 236.6 328.25 230.65Q331.05 225.4 331.55 221.2Q332.05 217 329.75 217.55Q327.1 218.2 321.95 225.45Q322.5 226.85 320.45 228.6Q318.45 230.3 315.95 230.75Q313.1 231.3 311.8 229.65Q310.25 227.65 311.45 222.9Q314.55 214.5 321.25 211.65Q327.1 209.2 333.85 211.4Q340.2 213.45 343.65 218.3Q347.35 223.4 345.25 228.45Q343.5 230.85 339.55 233.15" />
+<path style="fill:none;stroke-width:0.5;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke:#15272A;stroke-opacity:1" d="M339.55,233.15L329.05 238.8Q329.25 242.25 327.9 244.3Q326.7 246.15 324.85 246.25Q323 246.35 321.8 244.8Q320.45 243.05 320.75 240.15Q325.1 236.6 328.25 230.65Q331.05 225.4 331.55 221.2Q332.05 217 329.75 217.55Q327.1 218.2 321.95 225.45Q322.5 226.85 320.45 228.6Q318.45 230.3 315.95 230.75Q313.1 231.3 311.8 229.65Q310.25 227.65 311.45 222.9Q314.55 214.5 321.25 211.65Q327.1 209.2 333.85 211.4Q340.2 213.45 343.65 218.3Q347.35 223.4 345.25 228.45Q343.5 230.85 339.55 233.15z" />
+<linearGradient
+id="LinearGradID_347" gradientUnits="userSpaceOnUse" gradientTransform="matrix(0.00891113, 0, 0, -0.00891113, 325.7, 254)" spreadMethod ="pad" x1="-819.2" y1="0" x2="819.2" y2="0" >
+<stop  offset="0" style="stop-color:#706F71;stop-opacity:1" />
+<stop  offset="1" style="stop-color:#050607;stop-opacity:1" />
+</linearGradient>
+<path style="fill:url(#LinearGradID_347) " d="M333,254.7Q332.75 257.35 330.4 259.05Q328.1 260.7 325.1 260.4Q322.1 260.15 320.15 258.05Q318.2 255.95 318.45 253.3Q318.7 250.65 321 248.95Q323.3 247.3 326.35 247.6Q329.35 247.9 331.3 250Q333.25 252.1 333 254.7" />
+<path style="fill:none;stroke-width:0.5;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke:#15272A;stroke-opacity:1" d="M333,254.7Q332.75 257.35 330.4 259.05Q328.1 260.7 325.1 260.4Q322.1 260.15 320.15 258.05Q318.2 255.95 318.45 253.3Q318.7 250.65 321 248.95Q323.3 247.3 326.35 247.6Q329.35 247.9 331.3 250Q333.25 252.1 333 254.7z" />
+</g>
+</svg>

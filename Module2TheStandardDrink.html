@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="podium.css">
+<script src="podium.js"></script>
+<style>
+.simple-img {
+  width: 100%;
+}
+</style>
+</head>
+<body>
+
+  <div id="mySidenav" class="sidenav">
+    <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+    <div w3-include-html="content.html"></div>
+  </div>
+
+<div class="grid-container">
+    <div class="indexnav">
+        <span style="font-size:30px;cursor:pointer" onclick="openNav()">&#9776; Index</span>
+    </div>
+    <div class="whiteboard">
+        <div class = "emptybackground">
+            <div class = "content">
+                <h1>The Standard Drink</h1>
+                <img class="simple-img" src="images/Comp-drinks.png">
+            <div class="threeRowFlex">
+                <div class="threeRowFlexChild">
+                    <p class="removeBlockMargin">One 12 OZ.</p>
+                    <p class="orangeText">Beer</p>
+                    <p class="removeBlockMargin">(5% Alcohol)</p>
+                </div>
+                <div class="threeRowFlexChild">
+                    <p class="removeBlockMargin">One 5 OZ.</p>
+                    <p class="orangeText">Glass of Wine</p>
+                    <p class="removeBlockMargin">(12% Alcohol)</p>
+                </div>
+                <div class="threeRowFlexChild">
+                    <p class="removeBlockMargin">1.5 OZ of</p>
+                    <p class="orangeText">Distilled<br>Spirits</p>
+                    <p class="removeBlockMargin">(40% Alcohol<br>or 80 proof)</p>
+                </div>
+            </div>
+            </div>
+        </div>
+    </div>
+      <div class="backfwd">
+        <form action="Module2TheStandardDrinkGame.html">
+            <input type="submit" value="" class="backbtn" />
+            <br>
+            Back
+        </form>
+        <form action="Module2FreePour.html">
+            <input type="submit" value="" class="fwdbtn" />
+            <br>
+            Next
+        </form>
+      </div>
+      <div class="fullscreen">
+        <button class="fullscreenBtn" onclick="openFullscreen();"</button>
+      </div>
+</div>
+<script>
+  includeHTML();
+</script>
+</body>
+</html> 

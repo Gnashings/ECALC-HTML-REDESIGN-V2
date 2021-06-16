@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="podium.css">
+<script src="podium.js"></script>
+
+</head>
+<body>
+
+  <div id="mySidenav" class="sidenav">
+    <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+    <div w3-include-html="content.html"></div>
+  </div>
+
+<div class="grid-container">
+    <div class="indexnav">
+        <span style="font-size:30px;cursor:pointer" onclick="openNav()">&#9776; Index</span>
+    </div>
+    <div class="whiteboard">
+      <div class="paperBackground">
+        <div class = "content">
+          <div class="workbook">
+            <h1>Workbook Exercise</h1>
+            <p>Thinking about times when you've had any amount of alcohol, circle words that describe effects you experienced. If you don't drink, circle words you THINK you might experience IF you were drinking.</p>
+            <table class="wb-table">
+              <tr>
+                <td>Less nervous</td>
+                <td>Relaxed</td>
+                <td>Cool</td>
+              </tr>
+              <tr>
+                <td>Active</td>
+                <td>Sleepy</td>
+                <td>Goofy</td>
+              </tr>
+              <tr>
+                <td>Cocky</td>
+                <td>Slow</td>
+                <td>Less upset</td>
+              </tr>
+              <tr>
+                <td>Content</td>
+                <td>Smart</td>
+                <td>Nice</td>
+              </tr>
+              <tr>
+                <td>Dizzy</td>
+                <td>Talkative</td>
+                <td>Sick</td>
+              </tr>
+              <tr>
+                <td>Friendly</td>
+                <td>Wild</td>
+                <td>Crazy</td>
+              </tr>
+              <tr>
+                <td>Funny</td>
+                <td>Calm</td>
+                <td>Good</td>
+              </tr>
+              <tr>
+                <td>Happy</td>
+                <td>Fun</td>
+                <td>Carefree</td>
+              </tr>
+              <tr>
+                <td>Loud</td>
+                <td>Jolly</td>
+                <td>Hyper</td>
+              </tr>
+              <tr>
+                <td>Pretty</td>
+                <td>Outgoing</td>
+                <td>Nauseous</td>
+              </tr>
+            </table>
+          </div>
+        </div>
+      </div>
+    </div>
+      <div class="backfwd">
+        <form action="Module3.html">
+            <input type="submit" value="" class="backbtn" />
+            <br>
+            Back
+        </form>
+        <form action="Module4.html">
+            <input type="submit" value="" class="fwdbtn" />
+            <br>
+            Next
+        </form>
+      </div>
+      <div class="fullscreen">
+        <button class="fullscreenBtn" onclick="openFullscreen();"</button>
+      </div>
+</div>
+<script>
+  includeHTML();
+</script>
+
+</body>
+</html> 

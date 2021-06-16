@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="podium.css">
+<script src="podium.js"></script>
+
+<style>
+.content {
+    width: 100%;
+    height: 100%;
+}
+.grid-container-VD {
+  display: grid;
+  position: relative;
+  z-index: 0;
+  font-size: larger;
+  margin: 0;
+  margin-left: auto;
+  margin-right: auto;
+  width: 80%;
+  max-width: 682px;
+  height: 100%;
+  max-height: 500px;
+  grid-template-columns: 1fr 0.5fr 1fr;
+  grid-template-rows: 0.5fr 0.5fr 1.5fr 0.5fr 0.5fr;
+  gap: 0px 0px;
+}
+
+.venn-controls { grid-area: 5 / 2 / 6 / 3; }
+
+
+.venn-img {
+  grid-area: 2 / 1 / 5 / 4;
+  background-image: url("images/VennDiagram.png");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+}
+
+.venn-alc-ad-header {
+    grid-area: 1 / 1 / 2 / 2;
+    position: absolute;
+    text-align: right;
+    width: 100%;
+    color: red;
+    bottom: 0;
+}
+.venn-water-ad-header {
+    grid-area: 1 / 3 / 2 / 4;
+    position: absolute;
+    text-align: left;
+    width: 100%;
+    color: blue;
+    bottom: 0;
+}
+
+.venn-alc-ad {
+    grid-area: 3 / 1 / 4 / 2;
+    position: absolute;
+    text-align: center;
+    z-index: 1;
+    left: 50%;
+    font-weight: 500;
+    
+}
+
+.venn-water-ad {
+    grid-area: 3 / 3 / 4 / 4;
+    position: absolute;
+    text-align: center;
+    z-index: 1;
+    right: 50%;
+    font-weight: 500;
+
+}
+
+.venn-common {
+    grid-area: 3 / 2 / 4 / 3;
+    text-align: center;
+    z-index: 1;
+    font-weight: 500;
+
+}
+.prof-img {
+    width: 20px;
+    z-index: 20;
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+}
+
+.prof-img img{
+    width: 250px;
+    position: absolute;
+    bottom: 0;
+}
+.grid-container-VD p {
+  /*opacity:0;
+  transition: 1s;*/
+}
+.venn-alc-ad p {
+  opacity:0; /* Completely invisible. */
+  /*transition:1s; /* A 1 second transition. */
+  
+}
+
+.venn-water-ad p {
+  opacity:0; /* Completely invisible. */
+  transition:1s; /* A 1 second transition. */
+}
+
+@keyframes stageone{
+  from {opacity: 0;}
+  to {opacity: 1;}
+}
+
+</style>
+</head>
+<body>
+
+  <div id="mySidenav" class="sidenav">
+    <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+    <div w3-include-html="content.html"></div>
+  </div>
+
+<div class="grid-container">
+    <div class="indexnav">
+        <span style="font-size:30px;cursor:pointer" onclick="openNav()">&#9776; Index</span>
+    </div>
+    <div class="whiteboard">
+      <div class="emptybackground">
+        <div class = "content">
+            <div class = "grid-container-VD">
+                <div class="venn-alc-ad-header">Alcohol Ad</div>
+                <div class="venn-water-ad-header">Water Ad</div>
+                <div class="venn-alc-ad" id="venn-alc-ad">
+                    <p id="venn-p-a1">Flirting</p>
+                    <p id="venn-p-a2">Happy</p>
+                    <p id="venn-p-a3">Partying</p>
+                    <p id="venn-p-a4">Having Fun</p>   
+                </div>
+                <div class="venn-water-ad" id="venn-water-ad">
+                    <p id="venn-p-w1">Flirting</p>
+                    <p id="venn-p-w2">Happy</p>
+                    <p id="venn-p-w3">Partying</p>
+                    <p id="venn-p-w4">Having Fun</p>
+                </div>
+                <div class="venn-common">
+                    <p id="venn-p-c1">Flirting</p>
+                    <p id="venn-p-c2">Happy</p>
+                    <p id="venn-p-c3">Partying</p>
+                    <p id="venn-p-c4">Having<br>Fun</p>
+                </div>
+                <div class="venn-img">
+                  
+                </div>
+                <div class="venn-controls">
+                  <img src="images/Arrow-Circle-Left.png" onclick="PrevScene()"><img src="images/Arrow-Circle-Right.png" onclick="NextScene()">
+                </div>
+            </div>
+            <div class="prof-img">
+
+            </div>
+            
+        </div>
+      </div>
+    </div>
+      <div class="backfwd">
+        <form action="Module9BrandsAndAdjectives.html">
+            <input type="submit" value="" class="backbtn" />
+            <br>
+            Back
+        </form>
+        <form action="Module10BecauseWeCan.html">
+            <input type="submit" value="" class="fwdbtn" />
+            <br>
+            Next
+        </form>
+      </div>
+      <div class="fullscreen">
+        <button class="fullscreenBtn" onclick="openFullscreen();"</button>
+      </div>
+</div>
+<script>
+  includeHTML();
+</script>
+<script src="ExpectancyOverlap.js"></script>
+</body>
+</html> 

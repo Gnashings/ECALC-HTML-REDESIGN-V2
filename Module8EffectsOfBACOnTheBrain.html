@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="podium.css">
+<link rel="stylesheet" href="effectsOfBAC.css">
+<script src="podium.js"></script>
+</head>
+<body>
+
+  <div id="mySidenav" class="sidenav">
+    <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+    <div w3-include-html="content.html"></div>
+  </div>
+
+<div class="grid-container">
+    <div class="indexnav">
+        <span style="font-size:30px;cursor:pointer" onclick="openNav()">&#9776; Index</span>
+    </div>
+    <div class="whiteboard">
+        <div class = "blueBackground">
+            <div class="brain-grid">
+
+                <div class="brain-header">
+                    <h1>Effects of BAC on the Brain</h1>
+                </div>
+
+                <div class="brain-image-1"> <img src="images/BrainA.png" class="brain-img" id="brain-img-1"> </div>
+
+                <div class="brain-alcohol-count-1">
+                    <div class="alcohol-count">
+                        <p>Brain While Drinking</p>
+                        <p># of Alcohol Drinks: 0</p>
+                    </div>
+                </div>
+
+                <div class="brain-image-2"> <img src="images/BrainA.png" class="brain-img" id="brain-img-2"> </div>
+
+                <div class="brain-btn-down" onclick="PrevGaugeStage()">
+                    
+                </div>
+
+                <div class="brain-btn-up" onclick="NextGaugeStage()">
+                
+                </div>
+
+                <div class="brain-alcohol-count-2">
+                    <div class="alcohol-count">
+                        <p>Control Brain (No Alcohol)</p>
+                        <p># of Alcohol Drinks: 0</p>
+                    </div>
+                </div>
+
+                <div class="brain-gauge-1">
+                    <img src="images/Gauge1.png" class="center-img">
+                    <div class="droplet"> <img src="images/GaugeArrow.png" id="gaugedial-1" class="gaugedial"> </div>
+                </div>
+
+                <div class="brain-gauge-2">
+                    <img src="images/Gauge2.png" class="center-img">
+                    <div class="droplet"> <img src="images/GaugeArrow.png" id="gaugedial-2" class="gaugedial"> </div>
+                </div>
+                
+
+                <div class="brain-moodtext-1">
+                    <div class="moodtext" id="moodtext-1">
+                        <div class="mood-child" id="mood-child-1-1">
+                        </div>
+                        <div class="mood-child" id="mood-child-1-2">
+                        </div>
+                    </div>
+                </div>
+
+                <div class="brain-moodtext-2">
+                    <div class="moodtext">
+                        <div class="mood-child" id="mood-child-2-1">
+                        </div>
+                        <div class="mood-child" id="mood-child-2-2">
+                        </div>
+                    </div>
+                </div>
+
+                <div class="brain-countdown">
+                    <div>Countdown to BAC = .00</div>
+                    <br>
+                    <div id="countdown-time"></div>
+                </div>
+              </div>
+        </div>
+    </div>
+      <div class="backfwd">
+        <form action="Module8.html">
+            <input type="submit" value="" class="backbtn" />
+            <br>
+            Back
+        </form>
+        <form action="Module9.html">
+            <input type="submit" value="" class="fwdbtn" />
+            <br>
+            Next
+        </form>
+      </div>
+      <div class="fullscreen">
+        <button class="fullscreenBtn" onclick="openFullscreen();"</button>
+      </div>
+</div>
+<script>
+  includeHTML();
+</script>
+<script src="effectsofBAC.js"></script>
+</body>
+</html> 

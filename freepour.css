@@ -1,0 +1,243 @@
+.pour-container {
+    display: grid;
+    position: relative;
+    overflow: hidden;
+    margin: 15px;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 0.5fr 1fr 1fr 1fr;
+    gap: 0px 5px;
+  }
+  
+  .solo-cup {
+    grid-area: 2 / 1 / 5 / 2;
+    z-index: 1;
+}
+  .pour-header {
+      grid-area: 1 / 1 / 2 / 2;
+      text-align: center;
+      font-family: Century Gothic,CenturyGothic,AppleGothic,sans-serif; 
+    }
+
+  .choose-drink-text {
+      grid-area: 1 / 2 / 2 / 3;
+      font-family: Century Gothic,CenturyGothic,AppleGothic,sans-serif; 
+    }
+
+  .drink-select {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-rows: 1.0fr;
+    background-color: rgba(62, 53, 62, 0.6);
+    gap: 0px 5px;
+    padding: 10px 5px 5px 5px;
+    border-width: 2px;
+    margin-right: auto;
+    margin-left: auto;
+    margin-bottom: auto;
+    min-height: 70%;
+    min-width: 80%;
+    max-height: 80%;
+    border-style: solid;
+    grid-template-areas: ". . . .";
+    grid-area: 2 / 2 / 3 / 3;
+  }
+  
+  .drink-controls {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr;
+    min-width: 80%;
+    max-width: 80%;
+    min-height: 80%;
+    max-height: 80%;
+    margin-right: auto;
+    margin-left: auto;
+    margin-bottom: auto;
+    gap: 0px 5px;
+    grid-template-areas: ". . .";
+    grid-area: 4 / 2 / 5 / 3;
+  }
+  
+  .masked {
+    grid-area: 2 / 1 / 5 / 2;
+    height: 100%;
+    width: 100%;
+    background-size: auto;
+    background-position: bottom;
+    background-repeat: no-repeat;
+    -webkit-mask-image: url(images/soloLayerMask.png);
+    -webkit-mask-size: auto;
+    -webkit-mask-position: top;
+    -webkit-mask-repeat: no-repeat;
+    -webkit-mask-mode: alpha;
+    background-image: url(images/BlueBackdrop.png);
+    z-index: 2;
+}
+.filler {
+    grid-area: 2 / 1 / 5 / 2;
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    min-width: 300px;
+    transition: 1s;
+    bottom: 0;
+    left: 0;
+    transform: translateY(100%);
+    z-index: 0;
+}
+  
+.cup {
+    height: 300px;
+    max-width: 100%;
+    min-width: 300px;
+    position: relative;
+    overflow: hidden;
+
+}
+
+
+.fillerImg {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.solo {
+    height: 100%;
+    width: 100%;
+    left: 0px;
+    bottom: 0px;
+    z-index: 1;
+
+}
+
+.soloImg {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    z-index: 1;
+}
+
+.correct-answer {
+    position: absolute;
+    visibility: hidden;
+    left: 185px;
+    top: 30%;
+    width: 500px;
+    font-family: Century Gothic,CenturyGothic,AppleGothic,sans-serif;
+    color: white;
+    text-shadow: 2px 2px 2px black;
+    z-index: 5;
+}
+
+.correct-bar {
+    border-style: solid;
+    border-color: lawngreen;
+    background-color: lawngreen;
+    width: 100px;
+    box-shadow: 0px 0px 2px 2px black;
+    margin: 0;
+    top: 50%;
+    -ms-transform: translateY(-50%);
+    transform: translateY(-50%);
+}
+
+.maskImg {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+
+}
+
+.btn-down {
+  border: none;
+  background: transparent;
+  background-image: url(images/ArrowDown.svg), url(images/GreenCircleButton.svg);
+  background-position: 50% 50%, center;
+  background-repeat: no-repeat, no-repeat;
+  background-size: 55%, contain;
+  height: 100%;
+  width: 100%;
+}
+.btn-up {
+  border: none;
+  background: transparent;
+  background-image: url(images/ArrowUp.svg), url(images/GreenCircleButton.svg);
+  background-position: 50% 50%, center;
+  background-repeat: no-repeat, no-repeat;
+  background-size: 55%, contain;
+  height: 100%;
+  width: 100%;
+}
+
+.btn-check {
+  border: none;
+  background: transparent;
+  background-image: url(images/QMark.svg), url(images/GreenCircleButton.svg);
+  background-position: 52% 50%, center;
+  background-repeat: no-repeat, no-repeat;
+  background-size: 40%, contain;
+  height: 100%;
+  width: 100%;
+}
+
+.tooltip {
+  position: relative;
+}
+
+.tooltip .tooltiptext {
+  visibility: hidden;
+  width: 50px;
+  background-image: linear-gradient(grey, white);
+  color: black;
+  border-radius: 6px;
+  padding: 0 5px;
+  position: absolute;
+  z-index: 9;
+  bottom: 100%;
+  left: 50%;
+  margin-left: -30px;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: smaller;
+  font-weight: lighter;
+}
+
+.tooltip .tooltiptext::after {
+  content: "";
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  margin-left: -5px;
+  border-width: 5px;
+  border-style: solid;
+  border-color: white transparent transparent transparent;
+}
+
+.tooltip:hover .tooltiptext {
+  visibility: visible;
+  text-align: center;
+  font-weight: bold;
+}
+
+p.tooltip-header {
+  color: rgb(180, 16, 16);
+  text-align: left;
+  font-weight:bold;
+  margin-block-end: 0;
+}
+
+.drink-img {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  margin-left: auto;
+  margin-right: auto;
+  max-width: 100%;
+  max-height: 100%;
+}
+
+.drink-img:hover{
+  -webkit-filter: drop-shadow(0 0 1.0rem lawngreen);
+  filter: drop-shadow(0 0 1.0rem lawngreen);
+}

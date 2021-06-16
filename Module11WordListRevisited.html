@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="podium.css">
+<script src="podium.js"></script>
+
+<style>
+
+.content {
+    margin-left:auto;
+    width: 75%;
+}
+
+.wl-table {
+    width: 100%;
+    font-size: large;
+    table-layout: fixed;
+}
+
+.grid-container {
+    position: relative;
+}
+
+
+.prof-img {
+    width: 20px;
+    z-index: 20;
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+}
+
+.prof-img img{
+    width: 250px;
+    position: absolute;
+    bottom: 0;
+}
+
+.myButton {
+	box-shadow:inset 0px 0px 8px -3px #f2fadc;
+	background:linear-gradient(to bottom, #cff088 5%, #8aba68 100%);
+	background-color:#cff088;
+	border-radius:25px;
+	border:2px solid #b2b8ad;
+	display:inline-block;
+	cursor:pointer;
+	color:#000000;
+	font-family:Arial;
+	font-size:15px;
+	padding:6px 40px;
+	text-decoration:none;
+	text-shadow:0px 1px 0px #ced9bf;
+}
+
+.wl-buttons {
+    float: right;
+}
+
+</style>
+
+</head>
+<body>
+
+  <div id="mySidenav" class="sidenav">
+    <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+    <div w3-include-html="content.html"></div>
+  </div>
+
+<div class="grid-container">
+    <div class="indexnav">
+        <span style="font-size:30px;cursor:pointer" onclick="openNav()">&#9776; Index</span>
+    </div>
+    <div class="whiteboard">
+      <div class="emptybackground">
+        <div class = "content">
+          <h1>Word List Revisited</h1>
+          <p>Click to remove the expectancies</p>
+          <table class="wl-table" id="wl-table">
+            <tr>
+              <td>Less nervous</td>
+              <td>Relaxed</td>
+              <td>Cool</td>
+            </tr>
+            <tr>
+              <td>Active</td>
+              <td>Sleepy</td>
+              <td>Goofy</td>
+            </tr>
+            <tr>
+              <td>Cocky</td>
+              <td>Slow</td>
+              <td>Less upset</td>
+            </tr>
+            <tr>
+              <td>Content</td>
+              <td>Smart</td>
+              <td>Nice</td>
+            </tr>
+            <tr>
+              <td>Dizzy</td>
+              <td>Talkative</td>
+              <td>Sick</td>
+            </tr>
+            <tr>
+              <td>Friendly</td>
+              <td>Wild</td>
+              <td>Crazy</td>
+            </tr>
+            <tr>
+              <td>Funny</td>
+              <td>Calm</td>
+              <td>Good</td>
+            </tr>
+            <tr>
+              <td>Happy</td>
+              <td>Fun</td>
+              <td>Carefree</td>
+            </tr>
+            <tr>
+              <td>Loud</td>
+              <td>Jolly</td>
+              <td>Hyper</td>
+            </tr>
+            <tr>
+              <td>Pretty</td>
+              <td>Outgoing</td>
+              <td>Nauseous</td>
+            </tr>
+          </table>
+          <div class="wl-buttons">
+            <a href="#" class="myButton" onclick="ShowAllAnswers()">Show All</a>
+            <a href="#" class="myButton"">GO</a>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="prof-img">
+        <img src="images/Prof.png">
+    </div>
+      <div class="backfwd">
+        <form action="Module11.html">
+            <input type="submit" value="" class="backbtn" />
+            <br>
+            Back
+        </form>
+        <form action="End.html">
+            <input type="submit" value="" class="fwdbtn" />
+            <br>
+            Next
+        </form>
+      </div>
+      <div class="fullscreen">
+        <button class="fullscreenBtn" onclick="openFullscreen();"</button>
+      </div>
+</div>
+<script>
+  includeHTML();
+</script>
+<script src="wordListRevisited.js"></script>
+</body>
+</html> 

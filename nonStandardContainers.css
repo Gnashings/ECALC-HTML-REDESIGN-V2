@@ -1,0 +1,231 @@
+.content {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
+    gap: 0px 20px;
+    padding-top: 20px;
+    margin: 10px;
+    background-color: rgba(62, 53, 62, 0.6);
+    border-color: black;
+    border-style: solid;
+    border-width: 2px;
+    grid-template-areas:
+      ". . . . ."
+      ". . . . ."
+      "last-row last-row last-row last-row last-row";
+  }
+
+  .last-row {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
+    grid-template-rows: 1fr;
+    gap: 0px 0px;
+    grid-template-areas:
+      ". . . . . .";
+    grid-area: last-row;
+  }
+  
+  .content-header {
+    grid-area: content-header;
+  }
+
+  .content-header h2 {
+    font-family: "Century Gothic", sans-serif;
+    font-size: 2em;
+    font-weight: 500;
+    color: rgb(180, 16, 16);
+  }
+
+  .tooltip {
+    position: relative;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  
+  .tooltip .tooltiptext {
+    visibility: hidden;
+    width: 120px;
+    background-image: linear-gradient(grey, white);
+    color: black;
+    border-radius: 6px;
+    padding: 0 5px;
+    position: absolute;
+    z-index: 1;
+    bottom: 100%;
+    left: 50%;
+    margin-left: -60px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: smaller;
+    font-weight: lighter;
+  }
+  
+  .tooltip .tooltiptext::after {
+    content: "";
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    margin-left: -5px;
+    border-width: 5px;
+    border-style: solid;
+    border-color: white transparent transparent transparent;
+  }
+  
+  .tooltip:hover .tooltiptext {
+    visibility: visible;
+  }
+
+  p.tooltip-header {
+    color: rgb(180, 16, 16);
+    text-align: left;
+    font-weight:bold;
+    margin-block-end: 0;
+  }
+
+  p.description {
+    margin-block-start: 0;
+  }
+
+  .drink-img {
+      display: block;
+      margin-left: auto;
+      margin-right: auto;
+      max-height: 100px;
+      text-align: center;
+  }
+
+  .drink-name{
+    color: white;
+    text-align: center;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: smaller;
+    font-weight: lighter;
+    text-shadow: 1px 1px 2px black;
+  }
+
+  .drinks {
+      margin-left: auto;
+      margin-right: auto;
+      margin-top: auto;
+      height: fit-content;
+  }
+
+  /* The Modal (background) */
+.drink-modal {
+  display: none; /* Hidden by default */
+  position: fixed; /* Stay in place */
+  z-index: 1; /* Sit on top */
+  padding-top: 100px; /* Location of the box */
+  left: 0;
+  top: 0;
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+  overflow: auto; /* Enable scroll if needed */
+  background-color: rgb(0,0,0); /* Fallback color */
+  background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+}
+
+/* Modal Content */
+.drink-modal-content {
+  display: grid;
+  font-family: Calibri;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 0.25fr 2fr 0.5fr;
+  gap: 0px 0px;
+  grid-template-areas:
+    ". drink-modal-header"
+    "drink-modal-image-area drink-modal-descriptor"
+    ". drink-modal-button-area";
+  background-image: linear-gradient(#65726c,#72847b );
+  margin: auto;
+  padding: 20px;
+  width: 300px;
+  height: 300px;
+  border: 1px solid;
+  border-width: 2px;
+  border-color: black;
+}
+
+.drink-modal-img {
+    max-width: 100%;
+}
+
+/* The Close Button */
+.drink-modal-close {
+  color: #aaaaaa;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+}
+
+.drink-close:hover,
+.drink-close:focus {
+  color: #000;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.drink-modal-image-area {
+  grid-area: drink-modal-image-area;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: auto;
+  margin-bottom: auto;
+}
+
+.drink-modal-header {
+  grid-area: drink-modal-header;
+}
+
+.drink-modal-header p{
+  margin-block-end: 0;
+  margin-inline-end: 0;
+  font-weight: 900;
+  font-size: 1.25em;
+}
+
+.drink-modal-descriptor {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr 1fr;
+  gap: 0px 0px;
+  grid-template-areas:
+    "drink-modal-descriptor-text drink-modal-descriptor-text"
+    "drink-modal-reveal-image drink-modal-reveal-answer";
+  grid-area: drink-modal-descriptor;
+}
+
+.drink-modal-descriptor-text { grid-area:drink-modal-descriptor-text; }
+
+.drink-modal-descriptor-text p {
+  margin-block-start: 0;
+  margin-inline-start: 0;
+}
+.drink-modal-reveal-image {
+  grid-area:drink-modal-reveal-image;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: auto;
+  margin-bottom: auto;
+}
+.drink-modal-reveal-answer {
+  grid-area:drink-modal-reveal-answer;
+  font-size: 2.0em;
+  font-weight: 900;
+}
+.drink-modal-button-area {
+  grid-area: drink-modal-button-area;
+  margin: 0 auto;
+}
+
+.drink-modal-button {
+  width: 150px;
+  padding: 5px;
+  margin: 1px;
+  border-radius: 6px;
+  border: 2px solid #a87017;
+  color: #333333;
+  font-family: Calibri;
+  font-size: 1em;
+  font-weight: bold;
+  background: linear-gradient(to bottom, #ffec64 5%, #ffab23 100%);
+}
