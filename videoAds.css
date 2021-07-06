@@ -48,4 +48,9 @@
     background:linear-gradient(to bottom, #ffec64 5%, #ffab23 100%);
 }
 
+.VideoPlayer{
+    margin-left: auto;
+    margin-right: auto;
+}
+
 body {font-family: Arial, Helvetica, sans-serif;}
