@@ -99,7 +99,7 @@ function CheckAnswer(){
     var answerText = document.getElementById("correct-text");
     
     answerBar.style.visibility = 'visible';
-    if(answerImage.src.match("images/Beer.png"))
+    if(answerImage.src.match("images/LiquidBeer.png"))
     {
         answerBar.style.top = '38%';
         answerText.innerHTML = ' Standard Drink: Beer';
