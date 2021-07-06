@@ -138,7 +138,7 @@
   background-image: linear-gradient(#65726c,#72847b );
   margin: auto;
   padding: 20px;
-  width: 300px;
+  width: 350px;
   height: 300px;
   border: 1px solid;
   border-width: 2px;
@@ -210,6 +210,7 @@
 .drink-modal-reveal-answer {
   grid-area:drink-modal-reveal-answer;
   font-size: 2.0em;
+  width: max-content;
   font-weight: 900;
 }
 .drink-modal-button-area {

@@ -5,9 +5,9 @@
 @import url("backgrounds.css");
 
 html{
-  /*background: linear-gradient(0deg, white, rgb(241, 241, 241) 100%) no-repeat;*/
+  background: linear-gradient(0deg, white, rgb(241, 241, 241) 100%) no-repeat;
   background-color: #222222;
-  min-height: 685px;
+  height: 100%;
 }
 
 @font-face {
@@ -18,16 +18,15 @@ html{
 #noborder{
   border: none;
   background: linear-gradient(0deg, grey, white 100%) no-repeat;
+
 }
 
 body {
   font-family: "Lato", sans-serif;
   box-sizing: border-box;
-  border: 16px solid transparent;
-  border-image: url(images/border.png) 16 round;
   margin: 0;
-  min-width: 965px;
-  min-height: 685px;
+  min-width: 100%;
+  min-height: 100%;
 }
 
 .sidenav {
@@ -194,10 +193,10 @@ body {
 .grid-container {
   display: grid;
   grid-template-columns: 0.5fr repeat(3, 2fr) 0.5fr;
-  grid-template-rows: 0.5fr repeat(3, 4fr) 0.5fr;
+  grid-template-rows: 1.0fr repeat(3, 4fr) 1.0fr;
   min-height: 100%;
   gap: 0px 0px;
-  background: linear-gradient(0deg, white, rgb(241, 241, 241) 100%) no-repeat;
+  /*background: linear-gradient(0deg, white, rgb(241, 241, 241) 100%) no-repeat;*/
   grid-template-areas:
   "indexnav indexnav . . fullscreen"
   ". whiteboard whiteboard whiteboard ."
