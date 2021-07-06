@@ -1,7 +1,7 @@
 
-const questionAudio1 = new Audio("Audio/FactOrMyth1.mp3");
-const questionAudio2 = new Audio("Audio/FactOrMyth2.mp3");
-const questionAudio3 = new Audio("Audio/FactOrMyth3.mp3");
+ questionAudio1 = new Audio("Audio/factOrMyth1.mp3");
+ questionAudio2 = new Audio("Audio/factOrMyth2.mp3");
+ questionAudio3 = new Audio("Audio/factOrMyth3.mp3");
 var QuizQuestion = [
   {
     showButtons: true,
