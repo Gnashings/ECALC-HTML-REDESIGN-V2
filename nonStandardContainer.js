@@ -17,7 +17,7 @@ let drinks = [
   ['Lemon Drop', 'x 2.2'],
   ['Pitcher of Beer', 'x 4-5'],
   ['Dry Martini', 'x 1.4'],
-  ['Yard of beer', 'x 5-6'],
+  ['Yard of Beer', 'x 5-6'],
   ['Vodka Tonic', 'x 1.3'],
 ];
 // Get the button that opens the modal
