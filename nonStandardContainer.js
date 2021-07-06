@@ -34,10 +34,14 @@ function PopUpModal(clicked_id)
     imageID = imageID.replace(/-/g, "")
     var drinkDescID = clicked_id.toLowerCase() + "-description";
     console.log(drinkDescID);
+
+    //drink image
     currentIDDrink = removeHyphen.replace(/-/g, " ");
     modal.style.display = "block";
     document.getElementById("drink-modal-header").innerHTML = currentIDDrink;
-    modalimg.src = "images/container"+imageID+".png";
+    modalimg.src = "images/Container"+imageID+".png";
+
+    //drink amount
     document.getElementById("drink-modal-descriptor").innerHTML = document.getElementById(drinkDescID).innerHTML;
     document.getElementById("drink-modal-reveal").innerHTML = "x ?";
 }
