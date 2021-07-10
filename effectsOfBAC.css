@@ -27,7 +27,10 @@
   }
   
   /*Grids*/
-  .brain-header { grid-area: brain-header; }
+  .brain-header {
+    grid-area: brain-header;
+    text-align: center;
+  }
   
   .brain-image-1 { grid-area: brain-image-1; }
   
