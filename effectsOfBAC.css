@@ -90,7 +90,7 @@
   
   .brain-moodtext-2 { grid-area: brain-moodtext-2; margin-bottom: 5%;}
   
-  .brain-countdown { grid-area: brain-countdown; }
+  .brain-countdown { grid-area: brain-countdown;}
   /*Grids*/
 
   /*image styling*/
@@ -100,6 +100,7 @@
     display: block;
     margin-right: auto;
     margin-left: auto;
+    filter: drop-shadow(5px 5px 3px #363636);
   }
   .center-img {
     display: block;
@@ -119,8 +120,8 @@
   .gaugedial {
     position: absolute;
     bottom: 0;
-    left: 79px;
-    width: 128px;
+    left: 77px;
+    width: 155px;
     transition: all 1s;
     z-index: 2;
   }
@@ -132,10 +133,13 @@
     padding-left: 5px;
     padding-right: 5px;
     font-size: 0.8em;
+    font-weight: 600;
+    text-align: center;
   }
 
   .alcohol-count {
     text-align: center;
+    font-weight: bold;
   }
 
   .moodtext {
@@ -143,12 +147,49 @@
     border-style: solid;
     border-width: 5px;
     display: grid;
+    font-size: large;
     border-color: green;
     background-color: #15d515;
     grid-template-columns: 1fr 1fr;
     color: white;
+    text-shadow: -1px 1px 2px #000,
+                  1px 1px 2px #000,
+                  1px -1px 0 #000,
+                 -1px -1px 0 #000;
   }
 
   .mood-child {
     padding: 5px;
-  }  
+    display: flex;
+    flex-flow: column;
+    justify-content: space-between;
+  }
+
+  .mood-child div {
+    margin-top: auto;
+    margin-bottom: auto;
+  }
+
+  #alcohol-count-text {
+    color: yellow;
+    text-shadow: -1px 1px 1px #000,
+    1px 1px 1px #000,
+    1px -1px 0 #000,
+   -1px -1px 0 #000;
+  }
+
+  #placebo-count-text {
+    color: yellow;
+    text-shadow: -1px 1px 1px #000,
+    1px 1px 1px #000,
+    1px -1px 0 #000,
+   -1px -1px 0 #000;
+  }
+
+  .countdown-header-text {
+    color: yellow;
+    text-shadow: -1px 1px 1px #000,
+    1px 1px 1px #000,
+    1px -1px 0 #000,
+   -1px -1px 0 #000;
+  }

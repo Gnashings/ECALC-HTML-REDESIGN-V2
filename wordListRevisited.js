@@ -1,5 +1,5 @@
 
-
+goAudio = new Audio("Audio/Module11Go.mp3");
 var table = document.getElementById("wl-table");
 
 if (table != null) {
@@ -36,4 +36,8 @@ function ShowAllAnswers(){
             }
         }
     }
+}
+
+function PlayVoiceover() {
+    goAudio.play();
 }

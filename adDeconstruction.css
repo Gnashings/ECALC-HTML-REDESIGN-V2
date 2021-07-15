@@ -23,10 +23,10 @@
 
 #ADmain {
     text-align: center;
-    padding: 5px;
     margin-bottom: 5%;
     margin-top: 5%;
-
+    width: 50%;
+    float: left;
 }
 
 #ADverlay {
@@ -107,4 +107,16 @@ body {font-family: Arial, Helvetica, sans-serif;}
   color: #000;
   text-decoration: none;
   cursor: pointer;
+}
+
+.img-ferrari {
+    width: 50%;
+    float: right;
+}
+
+.img-ferrari img {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    box-shadow: 10px 10px 10px;
 }
