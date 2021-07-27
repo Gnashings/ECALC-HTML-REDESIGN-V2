@@ -49,6 +49,7 @@
   
   .tealBackground {
     background: url(images/TealBackdrop.png) center no-repeat;
+    background-size: cover;
     display: flex;
     flex-direction: column;
     justify-content: center;

@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="podium.css">
+<script src="podium.js"></script>
+<style>
+  .videoplayer {
+    display: block;
+    margin: 0 auto;
+    width: 90%;
+  }
+  .content {
+    text-align: center;
+  }
+</style>
+</head>
+<body>
+
+  <div id="mySidenav" class="sidenav">
+    <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+    <div w3-include-html="content.html"></div>
+  </div>
+
+<div class="grid-container">
+    <div class="indexnav">
+        <span style="font-size:30px;cursor:pointer" onclick="openNav()">&#9776; Index</span>
+    </div>
+    <div class="whiteboard">
+      <div class="tealBackground">
+        <div class = "content">
+          <h1>Alcohol Memory Maps</h1>
+          <video class='videoplayer' id="VideoPlayer" autoplay="autoplay">
+            <source src="Videos/MemoryMaps.mp4" type="video/mp4">
+          </video>
+          <button onclick="PlayPauseSwap()" class="pauseButton" type="button">&#9632</button><br> 
+
+        </div>
+      </div>
+    </div>
+      <div class="backfwd">
+        <form action="Module5.html">
+            <input type="submit" value="" class="backbtn" />
+            <br>
+            Back
+        </form>
+        <form action="Module6.html">
+            <input type="submit" value="" class="fwdbtn" />
+            <br>
+            Next
+        </form>
+      </div>
+      <div class="fullscreen">
+        <button class="fullscreenBtn" onclick="openFullscreen();"</button>
+      </div>
+</div>
+<script>
+  includeHTML();
+</script>
+<script src="VideoPlayer.js"></script>
+</body>
+</html> 
