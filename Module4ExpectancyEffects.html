@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="podium.css">
+<script src="podium.js"></script>
+
+<style>
+.exp-video {
+    width: 60%;
+    transform: translate(-50%, -50%);
+  position: absolute;
+  top: 50%;
+  left: 50%;
+}
+
+.prof-img {
+    width: 20px;
+    z-index: 9;
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+}
+
+.prof-img img{
+    width: 250px;
+    position: absolute;
+    bottom: 0;
+}
+</style>
+</head>
+<body>
+
+  <div id="mySidenav" class="sidenav">
+    <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+    <div w3-include-html="content.html"></div>
+  </div>
+
+<div class="grid-container">
+    <div class="indexnav">
+        <span style="font-size:30px;cursor:pointer" onclick="openNav()">&#9776; Index</span>
+    </div>
+    <div class="whiteboard">
+        <!-- width="1120" height="770" -->
+        <video autoplay="autoplay" class="exp-video">
+            <source src="Videos/Expectancy.mp4" type="video/mp4">
+        </video>
+    </div>
+    <div class="prof-img">
+        <img src="images/Prof.png">
+    </div>
+      <div class="backfwd">
+        <form action="Module10.html">
+            <input type="submit" value="" class="backbtn" />
+            <br>
+            Back
+        </form>
+        <form action="Module10CantLiveWithout.html">
+            <input type="submit" value="" class="fwdbtn" />
+            <br>
+            Next
+        </form>
+      </div>
+      <div class="fullscreen">
+        <button class="fullscreenBtn" onclick="openFullscreen();"</button>
+      </div>
+</div>
+<script>
+  includeHTML();
+</script>
+<script src="becauseWeCan.js"></script>
+</body>
+</html> 
