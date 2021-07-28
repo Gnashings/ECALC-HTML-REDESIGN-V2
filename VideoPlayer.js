@@ -12,3 +12,9 @@ function PlayPauseSwap() {
   vid.onpause = function() {
     isPlaying = false;
   };
+
+function Replay() {
+    vid.pause();
+    vid.currentTime = 0;
+    vid.play();
+}

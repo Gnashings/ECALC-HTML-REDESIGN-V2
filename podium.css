@@ -300,14 +300,30 @@ p.removeBlockMargin{
 
 /* Video Buttons*/
 .pauseButton
-{
+{ 
   height: 30px;
   width: 30px;
-  border-radius: 50%;
-  background:linear-gradient(to bottom, #6fe43a 5%, #126423 100%);
-  border: 1px solid rgb(25, 87, 6);
-
+  background: none;
+  border: none;
+  background-image: url("images/PauseIcon.svg"), url("images/GreenCircleButton.svg");
+  background-position: center, center;
+  background-size: 40%, cover;
+  background-repeat: no-repeat, no-repeat;
 }
+.replayButton
+{ 
+  height: 30px;
+  width: 30px;
+  background: none;
+  border: none;
+  background-image: url("images/RewindIcon.svg"), url("images/GreenCircleButton.svg");
+  background-position: center, center;
+  background-size: 60%, cover;
+  background-repeat: no-repeat, no-repeat;
+  -webkit-transform: scaleX(-1);
+  transform: scaleX(-1);
+}
+
 
 @media screen and (max-width: 450px) {
   .sidenav {padding-top: 15px;}
