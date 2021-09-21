@@ -1,10 +1,12 @@
 <!DOCTYPE html>
 <html>
+
 <head>
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<link rel="stylesheet" href="podium.css">
-<script src="podium.js"></script>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="podium.css">
+  <script src="podium.js"></script>
 </head>
+
 <body>
 
   <div id="mySidenav" class="sidenav">
@@ -12,62 +14,63 @@
     <div w3-include-html="content.html"></div>
   </div>
 
-<div class="grid-container">
+  <div class="grid-container">
     <div class="indexnav">
-        <span style="font-size:30px;cursor:pointer" onclick="openNav()">&#9776; Index</span>
+      <span style="font-size:30px;cursor:pointer" onclick="openNav()">&#9776; Index</span>
     </div>
     <div class="whiteboard">
-        <div class = "greenBackground">
-            <div id = 'ADInteractive'>
-                <div id= 'ADQuestion'>
-                    <h2 id = 'ADQuestText'>
-                        Ad Deconstruction!: Beer Goggles
-                    </h2>
-                </div>
-                <br>
-                <div id = 'ADmain'>
-                    <button id = 'ADBtn1' class = 'ADButton' onClick = 'convertButton1()'>???</button><br>
-                    <button id = 'ADBtn2' class = 'ADButton' onClick = 'convertButton2()'>???</button><br>
-                    <button id = 'ADBtn3' class = 'ADButton' onClick = 'convertButton3()'>???</button><br>
-                <!-- The Modal -->
-                <div id="ADModal" class="ADmodal">
+      <div class="greenBackground">
+        <div id='ADInteractive'>
+          <div id='ADQuestion'>
+            <h2 id='ADQuestText'>
+              Ad Deconstruction!: Beer Goggles
+            </h2>
+          </div>
+          <br>
+          <div id='ADmainDecon'>
+            <button id='ADBtn1' class='ADButton' onClick='convertButton1()'>???</button><br>
+            <button id='ADBtn2' class='ADButton' onClick='convertButton2()'>???</button><br>
+            <button id='ADBtn3' class='ADButton' onClick='convertButton3()'>???</button><br>
+            <!-- The Modal -->
+            <div id="ADModal" class="ADmodal">
 
-                  <!-- Modal content -->
-                  <div class="ADmodal-content">
-                    <span class="ADclose">&times;</span>
-                    <img src='images/BeerGoggles.png' class = 'ADmodalImg'>
-                  </div>
+              <!-- Modal content -->
+              <div class="ADmodal-content">
+                <span class="ADclose">&times;</span>
+                <img src='images/BeerGoggles.png' class='ADmodalImg'>
+              </div>
 
-                </div>
-                </div>
-                <br>
-                <div id ='ADControls'>
-                    <button id='review' class = 'quizbutton' onClick = 'Prev()'> Review Ad </button>&emsp;&emsp;
-                    <button id='expectanciesBtn' class = 'quizbutton' onClick = 'ChangeAllToRed()'>Show Expectancies</button>
-                </div>
-            
             </div>
+          </div>
+          <br>
+          <div id='ADControls'>
+            <button id='review' class='quizbutton' onClick='Prev()'> Review Ad </button>&emsp;&emsp;
+            <button id='expectanciesBtn' class='quizbutton' onClick='ChangeAllToRed()'>Show Expectancies</button>
+          </div>
+
         </div>
+      </div>
     </div>
-      <div class="backfwd">
-        <form action="Module6ActivitySheet2.html">
-            <input type="submit" value="" class="backbtn" />
-            <br>
-            Back
-        </form>
-        <form action="Module7.html">
-            <input type="submit" value="" class="fwdbtn" />
-            <br>
-            Next
-        </form>
-      </div>
-      <div class="fullscreen">
-        <button class="fullscreenBtn" onclick="openFullscreen();"</button>
-      </div>
-</div>
-<script>
-  includeHTML();
-</script>
-<script src="adDeconstruction.js"></script>
+    <div class="backfwd">
+      <form action="Module6ActivitySheet2.html">
+        <input type="submit" value="" class="backbtn" />
+        <br>
+        Back
+      </form>
+      <form action="Module7.html">
+        <input type="submit" value="" class="fwdbtn" />
+        <br>
+        Next
+      </form>
+    </div>
+    <div class="fullscreen">
+      <button class="fullscreenBtn" onclick="openFullscreen();" </button>
+    </div>
+  </div>
+  <script>
+    includeHTML();
+  </script>
+  <script src="adDeconstruction.js"></script>
 </body>
-</html> 
+
+</html>

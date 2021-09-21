@@ -29,6 +29,14 @@
     float: left;
 }
 
+#ADmainDecon {
+    text-align: center;
+    margin-bottom: 5%;
+    margin-top: 5%;
+    width: 50%;
+    float: left;
+}
+
 #ADverlay {
     position: fixed;
     display: none;

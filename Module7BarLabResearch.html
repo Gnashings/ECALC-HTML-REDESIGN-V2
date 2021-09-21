@@ -1,11 +1,13 @@
 <!DOCTYPE html>
 <html>
+
 <head>
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<link rel="stylesheet" href="podium.css">
-<script src="podium.js"></script>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="podium.css">
+  <script src="podium.js"></script>
 
 </head>
+
 <body>
 
   <div id="mySidenav" class="sidenav">
@@ -13,39 +15,40 @@
     <div w3-include-html="content.html"></div>
   </div>
 
-<div class="grid-container">
+  <div class="grid-container">
     <div class="indexnav">
-        <span style="font-size:30px;cursor:pointer" onclick="openNav()">&#9776; Index</span>
+      <span style="font-size:30px;cursor:pointer" onclick="openNav()">&#9776; Index</span>
     </div>
     <div class="whiteboard">
       <div class="emptybackground">
-        <div class = "content">
-            <div Id='align-center'>
-                <h1>Bar Lab Research</h1>
-                <img src='images/BarLab.png' width = '100%' style='margin-left: auto; margin-right: auto;'>
-            </div>
+        <div class="content">
+          <div Id='align-center'>
+            <h1>Bar Lab Research</h1>
+            <img src='images/BarLab.png' max-height='100%' style='margin-left: auto; margin-right: auto;'>
+          </div>
         </div>
       </div>
     </div>
-      <div class="backfwd">
-        <form action="Module7.html"></form>
-            <input type="submit" value="" class="backbtn" />
-            <br>
-            Back
-        </form>
-        <form action="Module7PowerOfThePlacebo.html">
-            <input type="submit" value="" class="fwdbtn" />
-            <br>
-            Next
-        </form>
-      </div>
-      <div class="fullscreen">
-        <button class="fullscreenBtn" onclick="openFullscreen();"</button>
-      </div>
-</div>
-<script>
-  includeHTML();
-</script>
+    <div class="backfwd">
+      <form action="Module7.html"></form>
+      <input type="submit" value="" class="backbtn" />
+      <br>
+      Back
+      </form>
+      <form action="Module7PowerOfThePlacebo.html">
+        <input type="submit" value="" class="fwdbtn" />
+        <br>
+        Next
+      </form>
+    </div>
+    <div class="fullscreen">
+      <button class="fullscreenBtn" onclick="openFullscreen();" </button>
+    </div>
+  </div>
+  <script>
+    includeHTML();
+  </script>
 
 </body>
-</html> 
+
+</html>
