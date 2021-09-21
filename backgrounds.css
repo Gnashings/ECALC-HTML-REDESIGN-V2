@@ -20,8 +20,8 @@
     height: 100%;
   }
 
-  .orangeBackground {
-    background: url(images/orangeBackdrop.png) center no-repeat;
+  .burntOrangeBackground {
+    background: url(images/burntOrangeBackdrop.png) center no-repeat;
     background-size: contain;
     display: flex;
     flex-direction: column;
