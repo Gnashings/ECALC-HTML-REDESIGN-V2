@@ -11,24 +11,28 @@
   
   .orangeBackground {
     background: url(images/orangeBackdrop.png) center no-repeat;
-    background-size: contain;
+    background-size: cover;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     align-content: center;
     height: 100%;
+    border:1px solid #000000;
+    box-shadow: 4px 4px 5px rgba(0, 0, 0, 0.75);
+  
   }
 
   .burntOrangeBackground {
     background: url(images/burntOrangeBackdrop.png) center no-repeat;
-    background-size: contain;
+    background-size: cover;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     align-content: center;
     height: 100%;
+    border:1px solid #000000;
   }
   
   .paperBackground {
@@ -57,6 +61,7 @@
     align-content: center;
     height: 100%;
     z-index: -1;
+    border:1px solid #000000;
   }
   
   .greenBackground {
@@ -84,6 +89,8 @@
     justify-content: center;
     align-items: center;
     align-content: center;
+    z-index: -1;
+    border:1px solid #000000;
   }
 
   .purpleBackground {
