@@ -29,6 +29,11 @@
     float: left;
 }
 
+#ADVideo {
+    display: block;
+    margin: 0 auto;
+}
+
 #ADmainHalf {
     text-align: center;
     margin-bottom: 5%;
