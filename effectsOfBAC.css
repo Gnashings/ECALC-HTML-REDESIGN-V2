@@ -16,7 +16,7 @@
       display: grid;
       position: relative;
       grid-template-columns: 2fr 0.5fr 0.5fr 2fr;
-      grid-template-rows: 1fr 1fr 1fr 0.25fr 0.25fr 1fr;
+      grid-template-rows: 0.5fr 1fr 1fr 0.25fr 0.25fr 1fr;
       gap: 0px 0px;
       grid-template-areas: "brain-header brain-header brain-header brain-header"
         "brain-image-1 . . brain-image-2"

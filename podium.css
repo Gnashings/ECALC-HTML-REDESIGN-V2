@@ -192,7 +192,7 @@ body {
 .grid-container {
   display: grid;
   grid-template-columns: 0.5fr repeat(3, 2fr) 0.5fr;
-  grid-template-rows: 1.0fr repeat(3, 4fr) 1.0fr;
+  grid-template-rows: 1.0fr repeat(3, 4fr) 0fr;
   min-height: 100%;
   gap: 0px 0px;
   /*background: linear-gradient(0deg, white, rgb(241, 241, 241) 100%) no-repeat;*/
