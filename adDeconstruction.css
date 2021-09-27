@@ -32,6 +32,8 @@
 #ADVideo {
     display: block;
     margin: 0 auto;
+    width: max-content;
+
 }
 
 #ADmainHalf {
