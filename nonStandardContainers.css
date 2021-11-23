@@ -138,7 +138,7 @@
   background-image: linear-gradient(#65726c,#72847b );
   margin: auto;
   padding: 20px;
-  width: 350px;
+  width: 70%;
   height: 300px;
   border: 1px solid;
   border-width: 2px;
@@ -229,4 +229,22 @@
   font-size: 1em;
   font-weight: bold;
   background: linear-gradient(to bottom, #ffec64 5%, #ffab23 100%);
+}
+
+@media only screen and (max-width: 450px) {
+  .drink-name {
+    font-size: 3vw;
+  }
+  
+  .drink-img {
+    max-height: 15vw;
+    width: 50%;
+  }
+
+  .content {
+    gap: 0px 0px;
+    padding-top: 0px;
+    margin: 1px;
+    
+  }
 }

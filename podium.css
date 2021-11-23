@@ -326,8 +326,7 @@ p.removeBlockMargin{
 
 @media screen and (max-width: 450px) {
   .sidenav {padding-top: 15px;}
-  .sidenav a {font-size: 18px;}
+  .sidenav a {font-size: 4vw;}
   .indexnav span {font-size: 24px;}
   .fullscreenBtn{ background:url("images/fullscreen.png") center no-repeat; background-size: 50% 50%;}
-
 }

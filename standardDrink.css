@@ -14,7 +14,6 @@
 }
 .options{
     display: inline-block;
-
     text-align: center;
     background-color:rgba(62, 53, 62, 0.6);
     width: 100%;
@@ -42,30 +41,44 @@
 #optionA {
     background: transparent;
     background: url("images/OptionA.png") center no-repeat;
-    background-size: 100%;
+    background-size: contain;
 }
 #optionB {
     background: transparent;
     background: url("images/OptionB.png") center no-repeat;
-    background-size: 100%;
+    background-size: contain;
 }
 #optionC {
     background: transparent;
     background: url("images/OptionC.png") center no-repeat;
-    background-size: 100%;
+    background-size: contain;
 }
 #optionD {
     background: transparent;
     background: url("images/OptionD.png") center no-repeat;
-    background-size: 100%;
+    background-size: contain;
 }
 #optionE {
     background: transparent;
     background: url("images/OptionE.png") center no-repeat;
-    background-size: 100%;
+    background-size: contain;
 }
 #optionF {
     background: transparent;
     background: url("images/OptionF.png") center no-repeat;
-    background-size: 100%;
+    background-size: contain;
+}
+
+@media only screen and (max-width: 450px) {
+    .optionbtn {
+        height: 45%;
+        width: 25%;
+        margin: 2px;
+    }
+    #SDQuestText {
+        font-size: 1.1em;
+    }
+    .options {
+        height: 45%;
+    }
 }

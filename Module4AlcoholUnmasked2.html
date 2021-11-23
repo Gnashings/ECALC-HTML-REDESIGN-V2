@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="podium.css">
+  <script src="podium.js"></script>
+</head>
+
+<body>
+
+  <div id="mySidenav" class="sidenav">
+    <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+    <div w3-include-html="content.html"></div>
+  </div>
+
+  <div class="grid-container">
+    <div class="indexnav">
+      <span style="font-size:30px;cursor:pointer" onclick="openNav()">&#9776; Index</span>
+    </div>
+    <div class="whiteboard">
+      <div class="orangeDotsBackground">
+        <div id='AUInteractive'>
+          <div id='AUQuestion'>
+            <h2 id='AUQuestText'>
+              "Drinking alcohol makes a person..."
+            </h2>
+          </div>
+          <div id='AUVideo'>
+            <video controls>
+              <source src="Videos/Unmasked.mov" type="video/mp4">
+            </video>
+          </div>
+          <div id='AUControls'>
+            <button id='back' class='quizbutton' onClick='Prev()'> ◄ </button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="backfwd">
+      <form action="Module4WorkbookExerciseActivitySheet1.html">
+        <input type="submit" value="" class="backbtn" />
+        <br>
+        Back
+      </form>
+      <form action="Module4ExpectancyEffects.html">
+        <input type="submit" value="" class="fwdbtn" />
+        <br>
+        Next
+      </form>
+    </div>
+    <div class="fullscreen">
+      <button class="fullscreenBtn" onclick="openFullscreen();" </button>
+    </div>
+  </div>
+  <script>
+    includeHTML();
+  </script>
+  <script src="alcoholUnmasked.js"></script>
+</body>
+
+</html>
