@@ -1,66 +1,76 @@
 <!DOCTYPE html>
 <html>
+
 <head>
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<link rel="stylesheet" href="podium.css">
-<script src="podium.js"></script>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="podium.css">
+  <script src="podium.js"></script>
 
-<style>
+  <style>
+    .content {
+      margin-left: auto;
+      width: 75%;
+    }
 
-.content {
-    margin-left:auto;
-    width: 75%;
-}
+    .wl-table {
+      width: 100%;
+      font-size: large;
+      table-layout: fixed;
+    }
 
-.wl-table {
-    width: 100%;
-    font-size: large;
-    table-layout: fixed;
-}
-
-.grid-container {
-    position: relative;
-}
+    .grid-container {
+      position: relative;
+    }
 
 
-.prof-img {
-    width: 20px;
-    z-index: 9;
-    position: absolute;
-    left: 0;
-    right: 0;
-    bottom: 0;
-}
+    .prof-img {
+      width: 20px;
+      z-index: 9;
+      position: absolute;
+      left: 0;
+      right: 0;
+      bottom: 0;
+    }
 
-.prof-img img{
-    width: 250px;
-    position: absolute;
-    bottom: 0;
-}
+    .prof-img img {
+      width: 250px;
+      position: absolute;
+      bottom: 0;
+    }
 
-.myButton {
-	box-shadow:inset 0px 0px 8px -3px #f2fadc;
-	background:linear-gradient(to bottom, #cff088 5%, #8aba68 100%);
-	background-color:#cff088;
-	border-radius:25px;
-	border:2px solid #b2b8ad;
-	display:inline-block;
-	cursor:pointer;
-	color:#000000;
-	font-family:Arial;
-	font-size:15px;
-	padding:6px 40px;
-	text-decoration:none;
-	text-shadow:0px 1px 0px #ced9bf;
-}
+    .myButton {
+      box-shadow: inset 0px 0px 8px -3px #f2fadc;
+      background: linear-gradient(to bottom, #cff088 5%, #8aba68 100%);
+      background-color: #cff088;
+      border-radius: 25px;
+      border: 2px solid #b2b8ad;
+      display: inline-block;
+      cursor: pointer;
+      color: #000000;
+      font-family: Arial;
+      font-size: 15px;
+      padding: 6px 40px;
+      text-decoration: none;
+      text-shadow: 0px 1px 0px #ced9bf;
+    }
 
-.wl-buttons {
-    float: right;
-}
+    .wl-buttons {
+      float: right;
+    }
 
-</style>
+
+    @media screen and (max-width: 450px) {
+      .whiteboard {
+        transform: scale(0.5) translate(-41%, -50%);
+        width: 37rem;
+        height: 10rem;
+        position: absolute;
+      }
+    }
+  </style>
 
 </head>
+
 <body>
 
   <div id="mySidenav" class="sidenav">
@@ -68,13 +78,13 @@
     <div w3-include-html="content.html"></div>
   </div>
 
-<div class="grid-container">
+  <div class="grid-container">
     <div class="indexnav">
-        <span style="font-size:30px;cursor:pointer" onclick="openNav()">&#9776; Index</span>
+      <span style="font-size:30px;cursor:pointer" onclick="openNav()">&#9776; Index</span>
     </div>
     <div class="whiteboard">
       <div class="emptybackground">
-        <div class = "content">
+        <div class="content">
           <h1>Word List Revisited</h1>
           <p>Click to remove the expectancies</p>
           <table class="wl-table" id="wl-table">
@@ -137,27 +147,28 @@
       </div>
     </div>
     <div class="prof-img">
-        <img src="images/Prof.png">
+      <img src="images/Prof.png">
     </div>
-      <div class="backfwd">
-        <form action="Module11.html">
-            <input type="submit" value="" class="backbtn" />
-            <br>
-            Back
-        </form>
-        <form action="End.html">
-            <input type="submit" value="" class="fwdbtn" />
-            <br>
-            Next
-        </form>
-      </div>
-      <div class="fullscreen">
-        <button class="fullscreenBtn" onclick="openFullscreen();"</button>
-      </div>
-</div>
-<script>
-  includeHTML();
-</script>
-<script src="wordListRevisited.js"></script>
+    <div class="backfwd">
+      <form action="Module11.html">
+        <input type="submit" value="" class="backbtn" />
+        <br>
+        Back
+      </form>
+      <form action="End.html">
+        <input type="submit" value="" class="fwdbtn" />
+        <br>
+        Next
+      </form>
+    </div>
+    <div class="fullscreen">
+      <button class="fullscreenBtn" onclick="openFullscreen();" </button>
+    </div>
+  </div>
+  <script>
+    includeHTML();
+  </script>
+  <script src="wordListRevisited.js"></script>
 </body>
-</html> 
+
+</html>

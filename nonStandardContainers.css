@@ -233,14 +233,8 @@
 
 @media only screen and (max-width: 450px) {
   .drink-name {
-    font-size: 3vw;
+    font-size: 4.6vw;
   }
-  
-  .drink-img {
-    max-height: 15vw;
-    width: 50%;
-  }
-
   .content {
     gap: 0px 0px;
     padding-top: 0px;
