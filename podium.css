@@ -329,9 +329,13 @@ p.removeBlockMargin{
   .sidenav a {font-size: 4vw;}
   .indexnav span {font-size: 24px;}
   .fullscreenBtn{ background:url("images/fullscreen.png") center no-repeat; background-size: 50% 50%;}
+  .grid-container {
+
+    grid-template-columns: 1fr repeat(3, 2fr) 1fr;
+  }
   .whiteboard{
     transform: scale(0.5) translate(-49%, -25%);
-    width: 45rem;
+    width: 195vw;
     height: 42rem;
     position: absolute;
   }

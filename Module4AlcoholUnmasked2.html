@@ -4,7 +4,36 @@
 <head>
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="stylesheet" href="podium.css">
+  <link rel="stylesheet" href="alcoholUnmasked.css">
   <script src="podium.js"></script>
+  <style>
+    .prof-img {
+      width: 20px;
+      z-index: 9;
+      position: absolute;
+      left: 0;
+      right: 0;
+      bottom: 0;
+    }
+
+    .prof-img img {
+      width: 250px;
+      position: absolute;
+      bottom: 0;
+    }
+
+    @media only screen and (max-width: 450px) {
+      .exp-video {
+        width: 100%;
+      }
+
+      .prof-img img {
+        width: 150px;
+        position: absolute;
+        bottom: 0;
+      }
+    }
+  </style>
 </head>
 
 <body>
@@ -27,15 +56,18 @@
             </h2>
           </div>
           <div id='AUVideo'>
-            <video controls>
+            <video autoplay="autoplay" class="exp-video">
               <source src="Videos/Unmasked.mov" type="video/mp4">
             </video>
           </div>
           <div id='AUControls'>
-            <button id='back' class='quizbutton' onClick='Prev()'> ◄ </button>
+            <a href="Module4AlcoholUnmasked.html"><button id='back' class='quizbutton'> ◄ </button></a>
           </div>
         </div>
       </div>
+    </div>
+    <div class="prof-img">
+      <img src="images/Prof.png">
     </div>
     <div class="backfwd">
       <form action="Module4WorkbookExerciseActivitySheet1.html">
@@ -56,7 +88,7 @@
   <script>
     includeHTML();
   </script>
-  <script src="alcoholUnmasked.js"></script>
+
 </body>
 
 </html>
