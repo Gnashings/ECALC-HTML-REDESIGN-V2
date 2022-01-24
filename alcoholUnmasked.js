@@ -53,7 +53,7 @@ function StageOne() {
         //buttonList2[i] = buttonList[i];
     }
 }
-
+//test
 function StageTwo() {
     for (k = 0; k < buttonList.length; k++) {
         buttonList[k].style.visibility = "hidden";
