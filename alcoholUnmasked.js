@@ -45,11 +45,11 @@ function StageOne() {
         buttonList[i].style.visibility = "visible";
         buttonList[i].innerText = buttonList[i].id;
         if (i % 2 == 0) {
-            buttonList[i].style.background = 'linear-gradient(to bottom, #02ab0d 5%, #0de31c 100%)';
+            buttonList[i].style.background = 'linear-gradient(to bottom, #fc1c03 5%, #e4685d 100%)';
             //buttonList2[i] = buttonList[i];
         }
         else
-            buttonList[i].style.background = 'linear-gradient(to bottom, #fc1c03 5%, #e4685d 100%)';
+            buttonList[i].style.background = 'linear-gradient(to bottom, #02ab0d 5%, #0de31c 100%)';
         //buttonList2[i] = buttonList[i];
     }
 }
