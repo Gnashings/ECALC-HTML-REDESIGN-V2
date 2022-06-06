@@ -21,7 +21,10 @@ function Next() {
     if (stage == 1) {
         StageTwo();
     }
-    if (stage != 2) {
+    if (stage == 2) {
+        StageThree();
+    }
+    if (stage != 3) {
         stage++;
     }
 }
@@ -40,25 +43,44 @@ function Prev() {
 
 function StageOne() {
 
+    document.getElementById("AUQuestText").style.width = "fit-content";
+    document.getElementById("AUQuestTextAfter").style.width = "0%";
+    document.getElementById("AUQuestText").innerText = '"Drinking alcohol makes a person..."';
+    document.getElementById("AUQuestTextAfter").innerText = "";
+
     vid.innerHTML = '';
     for (i = 0; i < buttonList.length; i++) {
         buttonList[i].style.visibility = "visible";
         buttonList[i].innerText = buttonList[i].id;
         if (i % 2 == 0) {
+            //Change color to red.
             buttonList[i].style.background = 'linear-gradient(to bottom, #fc1c03 5%, #e4685d 100%)';
+            buttonList[i].style.border = '2px solid #a83328';
             //buttonList2[i] = buttonList[i];
         }
-        else
+        else {
+            //Change color to green.
             buttonList[i].style.background = 'linear-gradient(to bottom, #02ab0d 5%, #0de31c 100%)';
-        //buttonList2[i] = buttonList[i];
+            buttonList[i].style.border = '2px solid #088a11';
+            //buttonList2[i] = buttonList[i];
+        }
+
     }
 }
 //test
-function StageTwo() {
+function StageThree() {
     for (k = 0; k < buttonList.length; k++) {
         buttonList[k].style.visibility = "hidden";
         window.location.href = "Module4AlcoholUnmasked2.html";
     }
 
     vid.innerHTML = "NO VIDEO";
+}
+
+function StageTwo() {
+    document.getElementById("AUQuestText").style.width = "49%";
+    document.getElementById("AUQuestText").innerText = "Physical";
+
+    document.getElementById("AUQuestTextAfter").style.width = "49%";
+    document.getElementById("AUQuestTextAfter").innerText = "Expectancy";
 }
