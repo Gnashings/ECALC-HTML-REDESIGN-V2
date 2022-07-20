@@ -1,10 +1,12 @@
 <!DOCTYPE html>
 <html>
+
 <head>
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<link rel="stylesheet" href="podium.css">
-<script src="podium.js"></script>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="podium.css">
+  <script src="podium.js"></script>
 </head>
+
 <body>
 
   <div id="mySidenav" class="sidenav">
@@ -12,51 +14,53 @@
     <div w3-include-html="content.html"></div>
   </div>
 
-<div class="grid-container">
+  <div class="grid-container">
     <div class="indexnav">
-        <span style="font-size:30px;cursor:pointer" onclick="openNav()">&#9776; Index</span>
+      <span style="font-size:30px;cursor:pointer" onclick="openNav()">&#9776; Index</span>
     </div>
     <div class="whiteboard">
-        <div class = "blueprint">
-          <div id = 'quiz' class = 'quizPosition'>
-            <div id= 'question'>
-              <p id = 'questText'></p>
+      <div class="blueprint">
+        <div id='quiz' class='quizPosition'>
+          <div class="quizHeading">FACT OR MYTH</div>
+          <div id='question'>
+            <p id='questText'></p>
+          </div>
+          <div id='quizbuttons'>
+            <button id='fact' class='quizbutton' onClick='isAnswerFact()'>FACT</button>
+            <button id='myth' class='quizbutton' onClick='isAnswerMyth()'>MYTH</button>
+          </div>
+          <div id='explanation' class='quizNav'>
+            <div class="backgroundTextStyler" id="backgroundTextStyler">
+              <H3 id='answer'> </h3>
+              <p id='expText'> </p>
             </div>
-            <div id = 'quizbuttons' >
-              <button id='fact' class='quizbutton' onClick = 'isAnswerFact()'>FACT</button>
-              <button id='myth' class='quizbutton' onClick = 'isAnswerMyth()'>MYTH</button>
-            </div>
-            <div id ='explanation' class = 'quizNav'>
-              <div class="backgroundTextStyler">
-              <H3 id ='answer'> </h3>
-              <p id ='expText'> </p>
-              </div>
-              <button id='back' class='quizbutton' onClick = 'PrevQuestion()'> &#9668 </button>
-              <button id='next' class='quizbutton' onClick = 'NextQuestion()'> &#9658 </button>
-              <button id=reset class='quizbutton' onClick = 'ResetQuiz()'>Reset</button>
-            </div>
+            <button id='back' class='quizbutton' onClick='PrevQuestion()'> &#9668 </button>
+            <button id='next' class='quizbutton' onClick='NextQuestion()'> &#9658 </button>
+            <button id=reset class='quizbutton' onClick='ResetQuiz()'>Reset</button>
           </div>
         </div>
+      </div>
     </div>
-      <div class="backfwd">
-        <form action="Module1.html">
-            <input type="submit" value="" class="backbtn" />
-            <br>
-            Back
-        </form>
-        <form action="Module2.html">
-            <input type="submit" value="" class="fwdbtn" />
-            <br>
-            Next
-        </form>
-      </div>
-      <div class="fullscreen">
-        <button class="fullscreenBtn" onclick="openFullscreen();"</button>
-      </div>
-</div>
-<script>
-  includeHTML();
-</script>
-<script src="quiz.js"></script>
+    <div class="backfwd">
+      <form action="Module1.html">
+        <input type="submit" value="" class="backbtn" />
+        <br>
+        Back
+      </form>
+      <form action="Module2.html">
+        <input type="submit" value="" class="fwdbtn" />
+        <br>
+        Next
+      </form>
+    </div>
+    <div class="fullscreen">
+      <button class="fullscreenBtn" onclick="openFullscreen();" </button>
+    </div>
+  </div>
+  <script>
+    includeHTML();
+  </script>
+  <script src="quiz.js"></script>
 </body>
-</html> 
+
+</html>

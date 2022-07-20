@@ -1,72 +1,105 @@
-#standardDrink{
+#standardDrink {
     min-width: 50%;
     max-width: 80%;
+
+
+}
+
+.optionbtn {
     font-family: DKBabySitter;
     font-weight: bold;
-}
-.optionbtn{
-    font-family: DKBabySitter;
-    font-weight: bold;
-    border:none;
-    height: 140px;
-    width: 80px;
-    margin: 10px;
-}
-.options{
-    display: inline-block;
-    text-align: center;
-    background-color:rgba(62, 53, 62, 0.6);
+    border: none;
     width: 100%;
+    height: 177px;
+    margin: 1px;
 }
 
-#SDQuestion{
-    padding: 5%;
-    margin-top: 0%;
-    background-color:rgba(62, 53, 62, 0);
-}
-
-#SDQuestText{
-    font-size: 1.5em;
+.options {
+    display: inline-flex;
     text-align: center;
+    border: solid black 3px;
+    background-color: rgba(62, 53, 62, 0.6);
+    background-image: url("images/OptionShadow.png");
+    background-size: 99%;
+    background-position: bottom 14% right 50%;
+    background-repeat: no-repeat;
+    width: 100%;
+    height: 39%;
+    padding-top: 5%;
+}
+
+#SDQuestion {
+    padding: 2%;
+    margin-top: 0%;
+    background-color: rgba(62, 53, 62, 0);
+}
+
+#SDQuestText {
+    font-size: 2em;
+    text-align: center;
+    font-weight: normal;
     color: black;
 }
 
+#SDexplanation {
+    opacity: 0;
+    display: flex;
+}
 
-#SDexpText{
-    padding-top: 60px ;
+#SDexpText {
+    width: 50%;
+    font-size: 1.5em;
+    margin: 5% 0% 0% 5%;
+    text-align: left;
 }
 
 
-
-#optionA {
+#OptionA {
     background: transparent;
     background: url("images/OptionA.png") center no-repeat;
     background-size: contain;
 }
-#optionB {
+
+#OptionB {
     background: transparent;
     background: url("images/OptionB.png") center no-repeat;
     background-size: contain;
 }
-#optionC {
+
+#OptionC {
     background: transparent;
     background: url("images/OptionC.png") center no-repeat;
     background-size: contain;
 }
-#optionD {
+
+#OptionD {
     background: transparent;
     background: url("images/OptionD.png") center no-repeat;
     background-size: contain;
 }
-#optionE {
+
+#OptionE {
     background: transparent;
     background: url("images/OptionE.png") center no-repeat;
     background-size: contain;
 }
-#optionF {
+
+#OptionF {
     background: transparent;
     background: url("images/OptionF.png") center no-repeat;
     background-size: contain;
+}
+
+.AnswerImage {
+    display: inline-block;
+    background: transparent;
+    background: url("images/OptionE.png") center no-repeat;
+    background-size: contain;
+    font-weight: bold;
+    border: none;
+    height: 140px;
+    width: 80px;
+    margin-left: 5%;
 }
 
 @media only screen and (max-width: 450px) {
@@ -75,12 +108,15 @@
         width: 25%;
         margin: 2px;
     }
+
     #SDQuestText {
         font-size: 1.1em;
     }
-    #standardDrink{
+
+    #standardDrink {
         height: 100%;
     }
+
     .options {
         height: 45%;
     }

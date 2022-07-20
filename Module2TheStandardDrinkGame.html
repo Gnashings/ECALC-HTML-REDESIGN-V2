@@ -1,10 +1,13 @@
 <!DOCTYPE html>
 <html>
+
 <head>
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<link rel="stylesheet" href="podium.css">
-<script src="podium.js"></script>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="podium.css">
+  <link rel="stylesheet" href="standardDrink.css">
+  <script src="podium.js"></script>
 </head>
+
 <body>
 
   <div id="mySidenav" class="sidenav">
@@ -12,55 +15,58 @@
     <div w3-include-html="content.html"></div>
   </div>
 
-<div class="grid-container">
+  <div class="grid-container">
     <div class="indexnav">
-        <span style="font-size:30px;cursor:pointer" onclick="openNav()">&#9776; Index</span>
+      <span style="font-size:30px;cursor:pointer" onclick="openNav()">&#9776; Index</span>
     </div>
     <div class="whiteboard">
-        <div class = "blueBackground">          
-          <div id = 'standardDrink'>
-            <div id= 'SDQuestion'>
-                <h2 id = 'SDQuestText'>
-                    Which cup shows a standard drink for 80 proof liquor?
-                </h2>
-            </div>
-            <div class="options" >
-            <button id = optionA class="optionbtn" onClick = 'isRight(optionA)'>A</button>
-            <button id = optionB class="optionbtn" onClick = 'isRight(optionB)'>B</button>
-            <button id = optionC class="optionbtn" onClick = 'isRight(optionC)'>C</button>
-            <button id = optionD class="optionbtn" onClick = 'isRight(optionD)'>D</button>
-            <button id = optionE class="optionbtn" onClick = 'isRight(optionE)'>E</button>
-            <button id = optionF class="optionbtn" onClick = 'isRight(optionF)'>F</button>
+      <div class="blueBackground">
+        <div id='standardDrink'>
+          <div id='SDQuestion'>
+            <h2 id='SDQuestText'>
+              Which cup shows a <strong> standard drink </strong> for <strong> 80 proof liquor </strong>?
+            </h2>
+          </div>
+          <div class="options">
+            <button id=OptionA class="optionbtn" onClick='isRight(OptionA)'>A</button>
+            <button id=OptionB class="optionbtn" onClick='isRight(OptionB)'>B</button>
+            <button id=OptionC class="optionbtn" onClick='isRight(OptionC)'>C</button>
+            <button id=OptionD class="optionbtn" onClick='isRight(OptionD)'>D</button>
+            <button id=OptionE class="optionbtn" onClick='isRight(OptionE)'>E</button>
+            <button id=OptionF class="optionbtn" onClick='isRight(OptionF)'>F</button>
 
-            </div>
-            <div id ='SDexplanation'>
-                <p id ='SDexpText'>
-                  
-                </p>
+          </div>
+          <div id='SDexplanation'>
+            <div class="AnswerImage"></div>
+            <div id='SDexpText'>
+              Good Job! <br>Surprising, isn't it?
             </div>
 
           </div>
+
         </div>
+      </div>
     </div>
-      <div class="backfwd">
-        <form action="Module2.html">
-            <input type="submit" value="" class="backbtn" />
-            <br>
-            Back
-        </form>
-        <form action="Module2TheStandardDrink.html">
-            <input type="submit" value="" class="fwdbtn" />
-            <br>
-            Next
-        </form>
-      </div>
-      <div class="fullscreen">
-        <button class="fullscreenBtn" onclick="openFullscreen();"</button>
-      </div>
-</div>
-<script>
-  includeHTML();
-</script>
-<script src="standardDrink.js"></script>
+    <div class="backfwd">
+      <form action="Module2.html">
+        <input type="submit" value="" class="backbtn" />
+        <br>
+        Back
+      </form>
+      <form action="Module2TheStandardDrink.html">
+        <input type="submit" value="" class="fwdbtn" />
+        <br>
+        Next
+      </form>
+    </div>
+    <div class="fullscreen">
+      <button class="fullscreenBtn" onclick="openFullscreen();" </button>
+    </div>
+  </div>
+  <script>
+    includeHTML();
+  </script>
+  <script src="standardDrink.js"></script>
 </body>
-</html> 
+
+</html>

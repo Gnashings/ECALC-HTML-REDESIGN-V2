@@ -1,69 +1,97 @@
-button{
+button {
     background-color: yellow;
 
 }
+
 .quizbutton {
     box-shadow:
-    inset 0px 5px 5px #ffffff,
-    inset 0px 5px 5px #ffffff;
+        inset 0px 5px 5px #ffffff,
+        inset 0px 5px 5px #ffffff;
     background: linear-gradient(to bottom, #ffb004, #eeff00);
     border-radius: 7px;
     border: 2px solid #f0a10f;
     display: inline-block;
     cursor: pointer;
-	color:#333333;
-	font-family:Arial;
-	font-size:1em;
-	font-weight:bold;
-	padding:6px 24px;
-	text-decoration:none;
+    color: #333333;
+    font-size: 1em;
+    font-weight: bolder;
+    padding: 6px 24px;
+    text-decoration: none;
 
 }
+
 quizbutton:hover {
-	background:linear-gradient(to bottom, #ffab23 5%, #ffec64 100%);
-	background-color:#ffab23;
-}
-quizbutton:active {
-	position:relative;
-	top:1px;
+    background: linear-gradient(to bottom, #ffab23 5%, #ffec64 100%);
+    background-color: #ffab23;
 }
 
-#quiz{
+quizbutton:active {
+    position: relative;
+    top: 1px;
+}
+
+#fact {
+    width: 40%;
+}
+
+#myth {
+    width: 40%;
+}
+
+.quizHeading {
+    text-align: center;
+    font-family: 'DKBabySitter';
+    font-weight: bold;
+    font-size: 3em;
+    color: #fdf1f1;
+    text-shadow: 0px 0px 13px #ff6300, 3px 2px 3px #000000;
+    margin-bottom: 0.5em;
+    background-color: #584e4e00;
+}
+
+#quiz {
     max-width: 600px;
     min-height: 500px;
     max-height: 950px;
-    font-size:  1em;
+    font-size: 1em;
 }
 
-#questText{
+#questText {
     font-size: 1em;
     color: white;
 }
 
-#question{
+#question {
     padding: 5%;
-    background-color:rgba(62, 53, 62, 0.6);
-    margin-top: 10%;
+    background-color: rgba(62, 53, 62, 0.6);
+    box-shadow: 0px 0px 16px 4px #454d64;
 }
 
-#quizbuttons{
+#quizbuttons {
     text-align: center;
     padding-top: 5%;
     font-size: 2em;
+    font-weight: bolder;
+    display: inline-flex;
+    justify-content: space-between;
+    width: 100%;
 }
 
-.backgroundTextStyler{
-    background-color:#3e353e99;
+.backgroundTextStyler {
+    background-color: #04050699;
     color: white;
+    outline: #000000;
+    outline-width: 3px;
+    outline-style: solid;
+    opacity: 0;
 }
 
-.quizPosition{
-    position:relative;
+.quizPosition {
+    position: relative;
 }
-.quizNav{
+
+.quizNav {
     position: absolute;
-    bottom:0;
-    left:0;
-    padding-bottom: 5%;  
+    bottom: 0;
+    left: 0;
 }
-

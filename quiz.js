@@ -1,7 +1,7 @@
 
- questionAudio1 = new Audio("Audio/factOrMyth1.mp3");
- questionAudio2 = new Audio("Audio/factOrMyth2.mp3");
- questionAudio3 = new Audio("Audio/factOrMyth3.mp3");
+questionAudio1 = new Audio("Audio/factOrMyth1.mp3");
+questionAudio2 = new Audio("Audio/factOrMyth2.mp3");
+questionAudio3 = new Audio("Audio/factOrMyth3.mp3");
 var QuizQuestion = [
   {
     showButtons: true,
@@ -47,8 +47,8 @@ var totalIncorrectAnswers = 0;
 var totalUnanswered = 3;
 var MaxQuestionIndex = 2; // total amount of quiz questions, minus one. 
 var currentQuestionIndex = 0; // what question to load
-
-
+var audio;
+var isPlaying = false;
 
 const fact = document.getElementById('fact');
 const myth = document.getElementById('myth');
@@ -56,77 +56,88 @@ const reset = document.getElementById('reset');
 document.onload = LoadQuestion();
 
 // loads and updates questions.
-function LoadQuestion(){
+function LoadQuestion() {
   var qst = document.getElementById("questText");
   UpdateButtonAppearance();
   UpdateExplanation();
-  if (QuizQuestion[currentQuestionIndex].isAnswered == true){
-    if(QuizQuestion[currentQuestionIndex].isCorrect == true){
+  if (QuizQuestion[currentQuestionIndex].isAnswered == true) {
+    if (QuizQuestion[currentQuestionIndex].isCorrect == true) {
     }
     playSound(QuizQuestion[currentQuestionIndex].audioLog);
     DisableButtons();
   }
-  else
-  {
+  else {
     EnableButtons();
   }
   qst.innerHTML = QuizQuestion[currentQuestionIndex].questionText;
 }
 
 // a debugging tool to see current question data
-function debugQuestionData(x){
+function debugQuestionData(x) {
   console.log(QuizQuestion[x].showButtons);
   console.log(QuizQuestion[x].correctAnswer);
   console.log(QuizQuestion[x].showExplanation);
   console.log(QuizQuestion[x].isAnswered);
 }
 
-function UpdateButtonAppearance(){
-  if(QuizQuestion[currentQuestionIndex].isCorrect == null)
-  {
+function UpdateButtonAppearance() {
+  if (QuizQuestion[currentQuestionIndex].isCorrect == null) {
     fact.style.background = 'linear-gradient(to bottom, #ffec64 5%, #ffab23 100%)';
+    fact.style.border = '2px solid #f0a10f';
     myth.style.background = 'linear-gradient(to bottom, #ffec64 5%, #ffab23 100%)';
+    myth.style.border = '2px solid #f0a10f';
   }
 
-  if(QuizQuestion[currentQuestionIndex].isCorrect == true){
-    if(QuizQuestion[currentQuestionIndex].correctAnswer == true)
-    {
-      fact.style.background = 'linear-gradient(#44c767, #5cbf2a)';
+  if (QuizQuestion[currentQuestionIndex].isCorrect == true) {
+    if (QuizQuestion[currentQuestionIndex].correctAnswer == true) {
+      //change fact to green
+      fact.style.background = 'linear-gradient(rgb(2, 171, 13) 5%, rgb(13, 227, 28) 100%)';
+      fact.style.border = '2px solid rgb(8, 138, 17)';
+      //keep myth yellow
       myth.style.background = 'linear-gradient(to bottom, #ffec64 5%, #ffab23 100%)';
+      myth.style.border = '2px solid #f0a10f';
     }
-    else if (QuizQuestion[currentQuestionIndex].correctAnswer == false)
-    {
+    else if (QuizQuestion[currentQuestionIndex].correctAnswer == false) {
+      //keep fact yellow
       fact.style.background = 'linear-gradient(to bottom, #ffec64 5%, #ffab23 100%)';
-      myth.style.background = 'linear-gradient(#44c767, #5cbf2a)';
+      fact.style.border = '2px solid #f0a10f';
+      //change myth to green
+      myth.style.background = 'linear-gradient(rgb(2, 171, 13) 5%, rgb(13, 227, 28) 100%)';
+      myth.style.border = '2px solid rgb(8, 138, 17)';
     }
   }
-  else if(QuizQuestion[currentQuestionIndex].isCorrect == false){
-    if(QuizQuestion[currentQuestionIndex].correctAnswer == true)
-    {
+  else if (QuizQuestion[currentQuestionIndex].isCorrect == false) {
+    if (QuizQuestion[currentQuestionIndex].correctAnswer == true) {
+      //keep fact yellow
       fact.style.background = 'linear-gradient(to bottom, #ffec64 5%, #ffab23 100%)';
-      myth.style.background = 'linear-gradient(#e4685d, #eb675e)';
+      fact.style.border = '2px solid #f0a10f';
+      //change myth to red
+      myth.style.background = 'linear-gradient(rgb(252, 28, 3) 5%, rgb(228, 104, 93) 100%)';
+      myth.style.border = '2px solid rgb(168, 51, 40)';
     }
-    else
-    {
-      fact.style.background = 'linear-gradient(#e4685d, #eb675e)';
+    else {
+      //change fact to red
+      fact.style.background = 'linear-gradient(rgb(252, 28, 3) 5%, rgb(228, 104, 93) 100%)';
+      fact.style.border = '2px solid rgb(168, 51, 40)';
+      //keep myth yellow
       myth.style.background = 'linear-gradient(to bottom, #ffec64 5%, #ffab23 100%)';
+      myth.style.border = '2px solid #f0a10f';
+
     }
   }
 
 }
 
 // reviews the inputed answer, and updates each question accordingly
-function checkAnswer(answer){
-  if (answer == QuizQuestion[currentQuestionIndex].correctAnswer)
-  {
+function checkAnswer(answer) {
+  if (answer == QuizQuestion[currentQuestionIndex].correctAnswer) {
     QuizQuestion[currentQuestionIndex].isAnswered = true;
     QuizQuestion[currentQuestionIndex].isCorrect = true;
     totalCorrectAnswers++;
     totalUnanswered--;
     UpdateButtonAppearance();
   }
-  else
-  {
+  else {
     QuizQuestion[currentQuestionIndex].isAnswered = true;
     QuizQuestion[currentQuestionIndex].isCorrect = false;
     totalIncorrectAnswers++;
@@ -138,11 +149,11 @@ function checkAnswer(answer){
 }
 
 // checks if the button pressed was the right one
-function isAnswerFact(){
+function isAnswerFact() {
   playSound(QuizQuestion[currentQuestionIndex].audioLog);
   checkAnswer(true);
 }
-function isAnswerMyth(){
+function isAnswerMyth() {
   playSound(QuizQuestion[currentQuestionIndex].audioLog);
   checkAnswer(false);
 }
@@ -150,38 +161,35 @@ function isAnswerMyth(){
 // updates the explanation and answer text boxes
 function UpdateExplanation() {
   // if a question is answered, display the explanation text and answer text.
-  if (QuizQuestion[currentQuestionIndex].isAnswered)
-  {
-    if(QuizQuestion[currentQuestionIndex].isCorrect == true)
-    {
+  if (QuizQuestion[currentQuestionIndex].isAnswered) {
+    if (QuizQuestion[currentQuestionIndex].isCorrect == true) {
       document.getElementById("answer").innerHTML = QuizQuestion[currentQuestionIndex].correctText;
       document.getElementById("answer").style.color = '#17FF29';
-
+      document.getElementById("backgroundTextStyler").style.opacity = 1;
     }
-    else
-    {
+    else {
       document.getElementById("answer").innerHTML = QuizQuestion[currentQuestionIndex].incorrectText;
       document.getElementById("answer").style.color = '#FF0000';
+      document.getElementById("backgroundTextStyler").style.opacity = 1;
     }
     document.getElementById("expText").innerHTML = QuizQuestion[currentQuestionIndex].explanationText;
   }
-  else
-  { // if a question isn't answered, simply display no text
+  else { // if a question isn't answered, simply display no text
     document.getElementById("answer").innerHTML = "";
     document.getElementById("expText").innerHTML = "";
+    document.getElementById("backgroundTextStyler").style.opacity = 0;
   }
 }
 
 function NextQuestion() {
-  if (currentQuestionIndex == MaxQuestionIndex)
-  {
+  if (currentQuestionIndex == MaxQuestionIndex) {
     stopSound(QuizQuestion[currentQuestionIndex].audioLog);
     currentQuestionIndex = 3;
+    document.getElementById("backgroundTextStyler").style.opacity = 0;
     LoadResults();
     return;
   }
-  if (currentQuestionIndex < MaxQuestionIndex)
-  {
+  if (currentQuestionIndex < MaxQuestionIndex) {
     currentQuestionIndex++;
     console.log(currentQuestionIndex);
     stopSound(QuizQuestion[currentQuestionIndex].audioLog);
@@ -197,9 +205,8 @@ function LoadResults() {
   myth.style.visibility = 'hidden';
 }
 
-function PrevQuestion(){
-  if (currentQuestionIndex != 0)
-  {
+function PrevQuestion() {
+  if (currentQuestionIndex != 0) {
     currentQuestionIndex--;
     console.log(currentQuestionIndex);
     fact.style.visibility = 'visible';
@@ -209,39 +216,45 @@ function PrevQuestion(){
   }
 }
 
-function CorrectAns(){
+function CorrectAns() {
   DisableButtons();
   UpdateExplanation();
 }
 
-function IncorrectAns(){
+function IncorrectAns() {
   DisableButtons();
   UpdateExplanation();
 }
 
-function DisableButtons(){
+function DisableButtons() {
   fact.disabled = true;
   myth.disabled = true;
 }
 
-function EnableButtons(){
+function EnableButtons() {
   fact.disabled = false;
   myth.disabled = false;
 }
 
-function ResetQuiz(){
+function ResetQuiz() {
   location.reload();
 }
 
-var audio;
-function playSound(sound){
+
+function playSound(sound) {
   //const audio = new Audio("Audio/FactOrMyth1.mp3");
   audio = sound;
   audio.play();
+  isPlaying = true;
 }
 
-function stopSound(sound){
-  // = sound;
-  audio.pause();
-  audio.currentTime = 0;
+function stopSound(sound) {
+
+  if (isPlaying == true) {
+    audio.pause();
+    audio.currentTime = 0;
+    isPlaying = false;
+  }
+
+
 }
